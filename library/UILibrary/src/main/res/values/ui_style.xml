@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--**********************************************
+    *                  Dialog                        *
+    **********************************************-->
+    <style name="ui_dialog_wrap">
+        <item name="android:background">?attr/ui_dialog_bg</item>
+        <item name="ui_radius">?attr/ui_dialog_radius</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">?attr/ui_dialog_margin_vertical</item>
+        <item name="android:layout_marginBottom">?attr/ui_dialog_margin_vertical</item>
+    </style>
+
+    <style name="ui_tip_dialog_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">?attr/ui_tip_dialog_min_width</item>
+        <item name="android:minHeight">?attr/ui_tip_dialog_min_height</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">?attr/ui_content_spacing_horizontal</item>
+        <item name="android:layout_marginRight">?attr/ui_content_spacing_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">?attr/ui_tip_dialog_padding_horizontal</item>
+        <item name="android:paddingRight">?attr/ui_tip_dialog_padding_horizontal</item>
+        <item name="android:paddingTop">?attr/ui_tip_dialog_padding_vertical</item>
+        <item name="android:paddingBottom">?attr/ui_tip_dialog_padding_vertical</item>
+        <item name="android:background">?attr/ui_tip_dialog_bg</item>
+    </style>
+
+    <style name="ui_tab_sign_count_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">?attr/ui_tab_sign_count_view_minSize</item>
+        <item name="android:background">?attr/ui_tab_sign_count_view_bg</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/ui_config_color_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingLeft">?attr/ui_tab_sign_count_view_padding_horizontal</item>
+        <item name="android:paddingRight">?attr/ui_tab_sign_count_view_padding_horizontal</item>
+        <item name="android:minWidth">?attr/ui_tab_sign_count_view_minSize</item>
+        <item name="android:minHeight">?attr/ui_tab_sign_count_view_minSize</item>
+    </style>
+
+    <!--**********************************************
+    *                  TextView                     *
+    **********************************************-->
+    <style name="TextWhite" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/ui_font_size_16</item>
+        <item name="android:textColor">@color/ui_config_color_white</item>
+    </style>
+
+    <style name="TextSecondaryWhite" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/ui_font_size_14</item>
+        <item name="android:textColor">@color/ui_config_color_white</item>
+    </style>
+
+    <style name="TextThirdWhite" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/ui_font_size_12</item>
+        <item name="android:textColor">@color/ui_config_color_75_white</item>
+    </style>
+
+    <style name="TextBlack" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/ui_font_size_16</item>
+        <item name="android:textColor">@color/ui_config_color_pure_black</item>
+    </style>
+
+    <style name="TextSecondaryBlack" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/ui_font_size_14</item>
+        <item name="android:textColor">@color/ui_config_color_pure_black</item>
+    </style>
+
+    <style name="TextHintSecondaryBlack" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/ui_font_size_14</item>
+        <item name="android:textColor">@color/ui_config_color_pure_black</item>
+        <item name="android:textColorHint">@color/ui_config_color_25_pure_black</item>
+    </style>
+
+    <style name="TextThirdBlack" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/ui_font_size_12</item>
+        <item name="android:textColor">@color/ui_config_color_75_pure_black</item>
+    </style>
+
+
+    <style name="CommonButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">@dimen/ui_font_size_18</item>
+        <item name="android:textColor">@color/ui_config_color_white</item>
+        <item name="android:background">@drawable/ui_s_button_bg</item>
+    </style>
+
+    <style name="WhiteButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">@dimen/ui_font_size_18</item>
+        <item name="android:textColor">@color/ui_config_color_button</item>
+        <item name="android:background">@drawable/ui_s_white_border_rudius_bg</item>
+    </style>
+
+    <style name="CommonEnableButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">@dimen/ui_font_size_18</item>
+        <item name="android:textColor">@color/ui_config_color_white</item>
+        <item name="android:background">@drawable/ui_s_button_bg</item>
+    </style>
+</resources>

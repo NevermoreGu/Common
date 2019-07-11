@@ -1,0 +1,87 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //分包
+        multiDexEnabled true
+
+        //router
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java', 'src/main/aidl']
+            resources.srcDirs = ['src/main/java', 'src/main/aidl']
+            aidl.srcDirs = ['src/main/aidl']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':UILibrary')
+    api project(':NetworkLibrary')
+    api project(':ShareLibrary')
+    api project(':ZXingLibrary')
+    api 'com.android.support:multidex:1.0.1'
+    //RxPermissions
+    api 'com.github.tbruyelle:rxpermissions:0.10.2'
+    //图片加载 glide
+    api 'com.github.bumptech.glide:glide:3.7.0'
+
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44'
+    api 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    //butterknife
+    api "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeCompilerVersion"
+    //ARouter
+    api "com.alibaba:arouter-api:$rootProject.arouterApiVersion"
+    //每个模块都需要引入
+    annotationProcessor "com.alibaba:arouter-compiler:$rootProject.arouterCompilerVersion"
+    //dagger
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
+    api 'com.jakewharton.timber:timber:4.4.0'
+    api 'com.blankj:utilcode:1.24.2'
+    api 'org.greenrobot:eventbus:3.0.0'
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.runnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
+
+}

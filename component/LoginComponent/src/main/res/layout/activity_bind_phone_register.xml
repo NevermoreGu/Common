@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/ui_dark_config_ui_bg"
+              android:orientation="vertical">
+
+
+    <com.ui.widget.UINavigationView
+        android:id="@+id/uinv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_offset_top_bar"
+        android:background="@color/ui_dark_config_ui_item_bg">
+
+    </com.ui.widget.UINavigationView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_offset_56"
+        android:background="@drawable/ui_s_list_item_bg_with_border_bottom"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/ui_offset_10"
+        android:paddingRight="@dimen/ui_offset_10"
+        android:text="请输入手机收到的验证码"
+        android:textColor="@color/ui_dark_config_color_three_text"
+        android:textSize="@dimen/ui_font_size_16"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_offset_56"
+        android:background="@drawable/ui_edit_bg_border_bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/ui_offset_10"
+        android:paddingRight="@dimen/ui_offset_10">
+
+
+        <com.ui.widget.UIClearEditText
+            android:id="@+id/et_register_verification_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="@dimen/ui_offset_16"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_input_verification_code"
+            android:textColor="@color/ui_dark_config_color_three_text"
+            android:textColorHint="@color/ui_dark_config_color_two_hint"
+            android:textSize="@dimen/ui_font_size_16"/>
+
+        <View
+            android:layout_width="@dimen/ui_offset_1_px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/ui_offset_12"
+            android:layout_marginTop="@dimen/ui_offset_12"
+            android:layout_marginBottom="@dimen/ui_offset_12"
+            android:background="@color/ui_config_color_line"></View>
+
+        <com.batman.baselibrary.widget.SendValidateButton
+            android:id="@+id/tv_register_verification_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ui_offset_12"
+            android:text="@string/text_get_verification_code"
+            android:textColor="@color/ui_config_color_main"
+            android:textSize="@dimen/ui_font_size_14"/>
+
+    </LinearLayout>
+
+
+    <com.ui.widget.UIClearEditText
+        android:id="@+id/et_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_offset_56"
+        android:background="@color/ui_config_color_white"
+        android:drawableLeft="@drawable/ic_password"
+        android:drawablePadding="@dimen/ui_offset_16"
+        android:hint="设置登录密码"
+        android:paddingLeft="@dimen/ui_offset_10"
+        android:paddingRight="@dimen/ui_offset_10"
+        android:textColorHint="@color/ui_dark_config_color_two_hint"
+        android:textSize="@dimen/ui_font_size_16"/>
+
+    <Button
+        android:id="@+id/btn_login_login"
+        style="@style/CommonButton"
+        android:layout_width="@dimen/ui_btn_width"
+        android:layout_height="@dimen/ui_btn_height"
+        android:layout_below="@+id/ll_user"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/ui_offset_40"
+        android:text="立即验证"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/ui_offset_30"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cb_register_user_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/ui_s_checkbox"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ui_offset_12"
+            android:text="点击注册即表示已阅读并同意"
+            android:textColor="@color/ui_dark_config_color_two_text"
+            android:textSize="@dimen/ui_font_size_14"/>
+    </LinearLayout>
+
+    <com.ui.alpha.UIAlphaTextView
+        android:id="@+id/tv_register_user_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/ui_offset_12"
+        android:layout_marginTop="@dimen/ui_offset_8"
+        android:text="@string/text_user_agreement"
+        android:textColor="@color/ui_config_color_main"
+        android:textSize="@dimen/ui_font_size_16"/>
+</LinearLayout>

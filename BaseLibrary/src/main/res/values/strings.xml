@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BaseLibrary</string>
+    <string name="send_code">获取验证码</string>
+    <string name="second">秒</string>
+</resources>

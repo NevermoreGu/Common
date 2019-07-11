@@ -1,0 +1,60 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.batman.logincomponent">
+
+    <application
+        android:name=".LoginApplication">
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            ></activity>
+
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            ></activity>
+
+        <activity
+            android:name=".ui.activity.FindPasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            ></activity>
+
+        <activity
+            android:name=".ui.activity.ResetPasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            ></activity>
+
+        <activity
+            android:name=".ui.activity.NewDeviceLoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            ></activity>
+
+        <activity
+            android:name=".ui.activity.ServiceWebActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            ></activity>
+
+        <activity
+            android:name=".ui.activity.BindPhoneRegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            ></activity>
+
+        <activity
+            android:name=".ui.activity.BindPhoneActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            ></activity>
+
+        <activity
+            android:name=".ui.activity.VerifyWeiXinPhoneRegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            ></activity>
+    </application>
+</manifest>

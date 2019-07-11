@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/ui_dark_config_ui_bg"
+              android:orientation="vertical">
+
+
+    <com.ui.widget.UINavigationView
+        android:id="@+id/uinv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_offset_top_bar"
+        android:background="@color/ui_dark_config_ui_item_bg">
+
+    </com.ui.widget.UINavigationView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_offset_56"
+        android:background="@drawable/ui_s_list_item_bg_with_border_bottom"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/ui_offset_10"
+        android:paddingRight="@dimen/ui_offset_10"
+        android:text="需要绑定您的手机号"
+        android:textColor="@color/ui_dark_config_color_three_text"
+        android:textSize="@dimen/ui_font_size_16"/>
+
+    <com.ui.widget.UIClearEditText
+        android:id="@+id/et_login_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ui_config_color_white"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="@dimen/ui_offset_16"
+        android:hint="@string/hint_input_phone_number"
+        android:paddingLeft="@dimen/ui_offset_10"
+        android:paddingTop="@dimen/ui_offset_16"
+        android:paddingRight="@dimen/ui_offset_10"
+        android:paddingBottom="@dimen/ui_offset_16"
+        android:textColorHint="@color/ui_dark_config_color_two_hint"
+        android:textSize="@dimen/ui_font_size_16"/>
+
+    <Button
+        android:id="@+id/btn_login_login"
+        style="@style/CommonButton"
+        android:layout_width="@dimen/ui_btn_width"
+        android:layout_height="@dimen/ui_btn_height"
+        android:layout_below="@+id/ll_user"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/ui_offset_40"
+        android:text="@string/text_next_step"/>
+
+</LinearLayout>

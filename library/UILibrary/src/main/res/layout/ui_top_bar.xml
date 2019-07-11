@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/ui_offset_top_bar">
+
+
+    <ImageView
+        android:id="@+id/img_top_bar_back"
+        android:layout_width="@dimen/ui_offset_top_bar_back"
+        android:layout_height="@dimen/ui_offset_top_bar_back"
+        android:scaleType="centerInside"
+        android:src="@drawable/ui_ic_back"/>
+
+    <TextView
+
+        android:id="@+id/tv_top_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/ui_dark_config_color_title"
+        android:textSize="@dimen/ui_font_top_bar_title"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar_item"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/ui_offset_8"
+        android:paddingRight="@dimen/ui_offset_8">
+
+        <ImageView
+            android:id="@+id/img_app_search"
+            android:layout_width="@dimen/ui_offset_32"
+            android:layout_height="@dimen/ui_offset_32"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/img_app_right"
+            android:scaleType="centerInside"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/img_app_right"
+            android:layout_width="@dimen/ui_offset_32"
+            android:layout_height="@dimen/ui_offset_32"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:visibility="gone"/>
+
+        <com.ui.alpha.UIAlphaTextView
+            android:id="@+id/tv_app_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/ui_offset_8"
+            android:textColor="@color/ui_config_color_main"
+            android:textSize="@dimen/ui_font_top_bar_one_title"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</merge>

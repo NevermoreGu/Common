@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--*********************************************
+    *              Config Color                  *
+    **********************************************-->
+
+    <color name="colorPrimary">#ff9000</color>
+    <color name="colorPrimaryDark">#ff8000</color>
+
+    <color name="ui_config_color_transparent">#00000000</color>
+    <color name="ui_config_color_white">#ffffff</color>
+    <color name="ui_config_color_75_white">#C0FFFFFF</color>
+    <color name="ui_config_color_50_white">#80FFFFFF</color>
+    <color name="ui_config_color_25_white">#40FFFFFF</color>
+    <color name="ui_config_color_15_white">#26FFFFFF</color>
+    <color name="ui_config_color_10_white">#19FFFFFF</color>
+
+    <color name="ui_config_color_pure_black">#000000</color>
+    <color name="ui_config_color_75_pure_black">#C0000000</color>
+    <color name="ui_config_color_60_pure_black">#99000000</color>
+    <color name="ui_config_color_50_pure_black">#80000000</color>
+    <color name="ui_config_color_25_pure_black">#40000000</color>
+    <color name="ui_config_color_15_pure_black">#26000000</color>
+    <color name="ui_config_color_10_pure_black">#19000000</color>
+
+    <color name="ui_config_color_blue">#1B88EE</color>
+    <color name="ui_config_color_50_blue">#801B88EE</color>
+    <color name="ui_config_color_separator">#DEE0E2</color>
+    <color name="ui_config_color_separator_darken">#D4D6D8</color>
+    <color name="ui_config_color_background">#F4F5F7</color>
+    <color name="ui_config_color_background_pressed">#EEEFF1</color>
+    <color name="ui_config_color_black">#212832</color>
+    <color name="ui_config_color_line">#dfdfdf</color>
+    <color name="ui_config_color_link">#547FB0</color>
+    <color name="ui_config_color_pressed">#EEEEF0</color>
+
+    <color name="ui_config_color_gray_1">#353C46</color>
+    <color name="ui_config_color_gray_2">#49505A</color>
+    <color name="ui_config_color_gray_3">#5D646E</color>
+    <color name="ui_config_color_gray_4">#717882</color>
+    <color name="ui_config_color_gray_5">#858C96</color>
+    <color name="ui_config_color_gray_6">#99A0AA</color>
+    <color name="ui_config_color_gray_7">#ADB4BE</color>
+    <color name="ui_config_color_gray_8">#C4C8D0</color>
+    <color name="ui_config_color_gray_9">#D8DCE4</color>
+
+
+    <color name="ui_drawable_color_list_separator">#DEE0E2</color>
+    <color name="ui_drawable_color_list_separator_grey">#f5f5f5</color>
+    <color name="ui_drawable_color_list_pressed">#DEE0E2</color>
+
+    <!--*********************************************
+    *               App 配置色    采用theme提供默认配置               *
+    **********************************************-->
+    <!-- http://developer.android.com/intl/zh-cn/training/material/theme.html -->
+    <!--1.colorPrimary: Toolbar导航栏的底色。-->
+    <!--2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。-->
+    <!--3.textColorPrimary：整个当前Activity的字体的默认颜色。-->
+    <!--4.android:windowBackground：当前Activity的窗体颜色。-->
+    <!--5.colorAccent：CheckBox，RadioButton，SwitchCompat等控件的点击选中颜色-->
+    <!--6.colorControlNormal：CheckBox，RadioButton，SwitchCompat等默认状态的颜色。-->
+    <!--7.colorButtonNormal：默认状态下Button按钮的颜色。-->
+    <!--8.editTextColor：默认EditView输入框字体的颜色。-->
+    <!--<color name="ui_colorPrimary">@color/ui_config_color_blue</color>-->
+    <!--<color name="ui_colorPrimaryDark">@color/ui_colorPrimary</color>-->
+    <!--<color name="ui_colorAccent">@color/ui_config_color_red</color>-->
+    <!--<color name="ui_textColorPrimary">@color/ui_config_color_black</color>-->
+    <!--<color name="ui_textColorSecondary">@color/ui_config_color_white</color> &lt;!&ndash; 返回箭头也是用这个颜色 &ndash;&gt;-->
+    <!--<color name="ui_windowBackground">@color/ui_config_color_white</color>-->
+    <!--<color name="ui_navigationBarColor">@color/ui_config_color_black</color>-->
+    <!--<color name="ui_colorControlNormal">@color/ui_config_color_white</color>-->
+    <!--<color name="ui_editTextColor">@color/ui_config_color_black</color>-->
+    <!--<color name="ui_app_bg">@color/ui_config_color_white</color>-->
+
+
+    <!-- group list -->
+    <color name="ui_common_list_item_text_color">?attr/ui_config_color_black</color>
+    <color name="ui_group_list_section_header_text_color">?attr/ui_config_color_gray_3</color>
+
+
+    /**********************************************
+    *                TabSegment                  *
+    **********************************************/
+    <color name="ui_tab_segment_bottom_line_color">?attr/ui_config_color_blue</color>
+    <color name="ui_tab_segment_text_color">?attr/ui_config_color_black</color>
+
+
+    <color name="ui_dark_config_ui_bg">#F2F2F2</color>
+    <color name="ui_dark_config_ui_item_bg">#FFFFFF</color>
+    <color name="ui_dark_config_ui_top_bar">#FFFFFF</color>
+    <color name="ui_dark_config_color_title">#494949</color>
+    <color name="ui_dark_config_color_one_text">#494949</color>//18sp
+    <color name="ui_dark_config_color_one_hint">#999999</color>//14sp
+    <color name="ui_dark_config_color_two_text">#494949</color>//16sp
+    <color name="ui_dark_config_color_two_hint">#cccccc</color>//16sp
+    <color name="ui_dark_config_color_three_hint">#666666</color>//16sp
+    <color name="ui_dark_config_color_three_text">#333333</color>//14sp
+
+
+    <color name="ui_config_color_main">#367cdd</color>
+    <color name="ui_config_color_button">#367cdd</color>
+    <color name="ui_config_color_button_pressed">#0348A8</color>
+    <color name="ui_config_color_red">#EC5353</color>
+
+    <color name="ui_config_color_red_title">#FAE3B7</color>
+
+
+
+</resources>

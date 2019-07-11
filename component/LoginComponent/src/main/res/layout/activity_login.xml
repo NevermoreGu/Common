@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/ui_dark_config_ui_bg">
+
+    <LinearLayout
+        android:id="@+id/ll_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ui_dark_config_ui_item_bg"
+        android:orientation="vertical">
+
+        <com.ui.widget.UINavigationView
+            android:id="@+id/uinv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_offset_top_bar">
+
+        </com.ui.widget.UINavigationView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/ui_offset_20"
+            android:src="@drawable/login_ic_user_head"/>
+
+
+        <com.ui.widget.UIClearEditText
+            android:id="@+id/et_login_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_offset_24"
+            android:background="@drawable/ui_edit_bg_border_bottom"
+            android:drawableLeft="@drawable/login_ic_user"
+            android:drawablePadding="@dimen/ui_offset_16"
+            android:hint="@string/hint_input_phone_number"
+            android:paddingLeft="@dimen/ui_offset_10"
+            android:paddingTop="@dimen/ui_offset_16"
+            android:paddingRight="@dimen/ui_offset_10"
+            android:paddingBottom="@dimen/ui_offset_16"
+            android:textColorHint="@color/ui_dark_config_color_two_hint"
+            android:textSize="@dimen/ui_font_size_16"/>
+
+        <com.ui.widget.UIClearEditText
+            android:id="@+id/et_login_user_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ui_edit_bg_border_bottom"
+            android:drawableLeft="@drawable/login_ic_password"
+            android:drawablePadding="@dimen/ui_offset_16"
+            android:hint="@string/hint_input_login_password"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/ui_offset_10"
+            android:paddingTop="@dimen/ui_offset_16"
+            android:paddingRight="@dimen/ui_offset_10"
+            android:paddingBottom="@dimen/ui_offset_16"
+            android:textColorHint="@color/ui_dark_config_color_two_hint"
+            android:textSize="@dimen/ui_font_size_16"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login_login"
+        style="@style/CommonButton"
+        android:layout_width="@dimen/ui_btn_width"
+        android:layout_height="@dimen/ui_btn_height"
+        android:layout_below="@+id/ll_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ui_offset_40"
+        android:text="@string/text_login"/>
+
+    <com.ui.alpha.UIAlphaTextView
+        android:id="@+id/tv_login_forget_passsword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login_login"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/ui_offset_18"
+        android:layout_marginRight="@dimen/ui_offset_10"
+        android:text="@string/text_forget_password"
+        android:textColor="@color/ui_dark_config_color_three_text"
+        android:textSize="@dimen/ui_font_size_14"/>
+
+    <TextView
+        android:id="@+id/tv_login_other_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ui_offset_84"
+        android:text="@string/text_other_login"
+        android:textColor="@color/ui_dark_config_color_three_text"
+        android:textSize="@dimen/ui_font_size_14"/>
+
+    <ImageView
+        android:id="@+id/img_login_wei_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_login_other_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ui_offset_30"
+        android:src="@drawable/login_ic_weichat"/>
+</RelativeLayout>

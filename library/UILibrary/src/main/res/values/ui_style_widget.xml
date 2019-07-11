@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--********************* TabSegment *********************-->
+    <style name="UI.TabSegment">
+        <item name="ui_tab_has_indicator">false</item>
+        <item name="ui_tab_indicator_height">@dimen/ui_tab_segment_indicator_height</item>
+        <item name="android:textSize">@dimen/ui_tab_segment_text_size</item>
+        <item name="ui_tab_indicator_top">false</item>
+        <item name="ui_tab_icon_position">left</item>
+    </style>
+
+    <!--********************* Button *********************-->
+    <style name="UI.RoundButton" parent="@style/Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:padding">0dp</item>--><!-- 不用 android:padding，而用各个方向分别指定 padding，方便子类覆盖 -->
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+        <item name="ui_isRadiusAdjustBounds">true</item>
+        <item name="ui_backgroundColor">@color/ui_s_transparent</item>
+        <item name="ui_borderWidth">?attr/ui_round_btn_border_width</item>
+        <item name="ui_borderColor">?attr/ui_round_btn_border_color</item>
+        <item name="android:textColor">?attr/ui_round_btn_text_color</item>
+        <item name="android:textSize">@dimen/ui_font_size_16</item>
+    </style>
+
+    <!--********************* GroupListView *********************-->
+    <style name="UI.GroupListView">
+        <item name="separatorStyle">none</item>
+    </style>
+
+    <style name="UI.CommonListItemView">
+        <item name="android:paddingLeft">?attr/ui_content_padding_horizontal</item>
+        <item name="android:paddingRight">?attr/ui_content_padding_horizontal</item>
+        <item name="android:background">?attr/ui_s_list_item_bg_with_border_none</item>
+        <item name="ui_commonList_titleColor">?attr/ui_config_color_gray_1</item>
+        <item name="ui_commonList_detailColor">?attr/ui_config_color_gray_5</item>
+    </style>
+
+    <style name="UI.GroupListSectionView">
+        <item name="android:paddingLeft">?attr/ui_content_padding_horizontal</item>
+        <item name="android:paddingRight">?attr/ui_content_padding_horizontal</item>
+        <item name="android:paddingTop">
+            @dimen/ui_group_list_section_header_footer_padding_vertical
+        </item>
+        <item name="android:paddingBottom">
+            @dimen/ui_group_list_section_header_footer_padding_vertical
+        </item>
+    </style>
+
+    <!--********************* Loading *********************-->
+    <style name="UI.Loading">
+        <item name="ui_loading_view_size">?attr/ui_loading_size</item>
+        <item name="android:color">?attr/ui_loading_color</item>
+    </style>
+
+    <style name="UI.Loading.White">
+        <item name="ui_loading_view_size">?attr/ui_loading_size</item>
+        <item name="android:color">@color/ui_config_color_white</item>
+    </style>
+
+    <!--********************* TopBar *********************-->
+    <style name="UI.TopBar">
+        <item name="ui_topbar_separator_color">?attr/ui_config_color_separator</item>
+        <item name="ui_topbar_separator_height">1px</item>
+        <item name="ui_topbar_bg_color">@color/ui_config_color_white</item>
+        <item name="ui_topbar_need_separator">true</item>
+        <item name="ui_topbar_left_back_drawable_id">@drawable/ui_icon_topbar_back</item>
+        <item name="ui_topbar_title_gravity">center</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="ui_topbar_title_color">?attr/ui_config_color_gray_1</item>
+        <item name="ui_topbar_title_text_size">16sp</item>
+        <item name="ui_topbar_title_text_size_with_subtitle">16sp</item>
+        <item name="ui_topbar_title_margin_horizontal_when_no_btn_aside">0dp</item>
+        <item name="ui_topbar_title_container_padding_horizontal">8dp</item>
+        <item name="ui_topbar_subtitle_text_size">12sp</item>
+        <item name="ui_topbar_subtitle_color">@color/ui_config_color_gray_1</item>
+        <item name="ui_topbar_image_btn_width">48dp</item>
+        <item name="ui_topbar_image_btn_height">48dp</item>
+        <item name="ui_topbar_text_btn_padding_horizontal">12dp</item>
+        <item name="ui_topbar_text_btn_color_state_list">@color/ui_topbar_text_color</item>
+        <item name="ui_topbar_text_btn_text_size">16sp</item>
+    </style>
+
+    <style name="UI.CollapsingTopBarLayoutExpanded">
+        <item name="android:textColor">@color/ui_config_color_white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="UI.CollapsingTopBarLayoutCollapsed">
+        <item name="android:textColor">@color/ui_config_color_white</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <!--********************* Dialog *********************-->
+
+    <style name="UI.Dialog" parent="android:Theme.Dialog">
+        <item name="android:backgroundDimAmount">?attr/ui_dialog_background_dim_amount</item>
+        <item name="android:windowBackground">@color/ui_config_color_transparent</item>
+        <item name="android:windowNoTitle">true</item><!-- 不用window title，使用自己的layout来做title -->
+        <!-- <item name="android:windowTitleStyle">@style/dialog_title</item> --><!-- 不用设置windowStyleStyle，因为windowNoTitle=true -->
+        <item name="android:windowIsFloating">true</item><!-- 在中间弹框、背后有遮罩的效果 -->
+    </style>
+
+    <style name="UI.Dialog.FullWidth" parent="UI.Dialog">
+        <item name="ui_dialog_wrapper_style">@style/UI.Dialog.Wrapper.FullScreen</item>
+    </style>
+
+    <style name="UI.Dialog.FullWidth.NoAnimation" parent="UI.Dialog.FullWidth">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="UI.TipDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="UI.BottomSheet" parent="android:Theme.Dialog">
+        <item name="android:backgroundDimAmount">?attr/ui_dialog_background_dim_amount</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null
+        </item><!-- 为了避免在有 NavigationBar 的手机上 Dialog 从 NavigationBar 底部上来。去掉 Dialog 的动画，使用 View 的动画。-->
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="UI.Dialog.Wrapper">
+        <item name="android:paddingLeft">40dp</item>
+        <item name="android:paddingRight">40dp</item>
+    </style>
+
+    <style name="UI.Dialog.Wrapper.FullScreen">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="UI.Dialog.Title">
+        <item name="android:textColor">?attr/ui_config_color_black</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingLeft">?attr/ui_dialog_padding_horizontal</item>
+        <item name="android:paddingRight">?attr/ui_dialog_padding_horizontal</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="ui_paddingBottomWhenNotContent">27dp</item>
+    </style>
+
+    <style name="UI.Dialog.ActionContainer">
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="ui_dialog_action_container_justify_content">end</item>
+        <item name="ui_dialog_action_height">36dp</item>
+        <item name="ui_dialog_action_space">8dp</item>
+    </style>
+
+    <style name="UI.Dialog.Action">
+        <item name="android:textColor">@color/ui_config_color_blue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:background">@null</item>
+        <item name="ui_dialog_action_button_padding_horizontal">12dp</item>
+        <item name="ui_dialog_action_icon_space">6dp</item>
+        <item name="ui_dialog_positive_action_text_color">@color/ui_config_color_blue</item>
+        <item name="ui_dialog_negative_action_text_color">@color/ui_config_color_red</item>
+    </style>
+
+    <style name="UI.Dialog.MessageContent">
+        <item name="android:textColor">?attr/ui_config_color_gray_4</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingLeft">?attr/ui_dialog_padding_horizontal</item>
+        <item name="android:paddingRight">?attr/ui_dialog_padding_horizontal</item>
+        <item name="android:paddingBottom">28dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="ui_paddingTopWhenNotTitle">27dp</item>
+    </style>
+
+    <style name="UI.Dialog.EditContent" parent="UI.Dialog.MessageContent">
+        <item name="android:textColor">?attr/ui_config_color_black</item>
+        <item name="android:textColorHint">?attr/ui_config_color_gray_3</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">31dp</item>
+    </style>
+
+    <style name="UI.Dialog.MenuContainer">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="ui_dialog_menu_container_single_padding_vertical">0dp</item>
+        <item name="ui_dialog_menu_container_padding_top_when_title_exist">14dp</item>
+        <item name="ui_dialog_menu_container_padding_bottom_when_action_exist">27dp</item>
+        <item name="ui_dialog_menu_item_height">48dp</item>
+    </style>
+
+    <style name="UI.Dialog_MenuItem">
+        <item name="android:background">?attr/ui_s_list_item_bg_with_border_none</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingLeft">?attr/ui_dialog_padding_horizontal</item>
+        <item name="android:paddingRight">?attr/ui_dialog_padding_horizontal</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">?attr/ui_config_color_black</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="ui_dialog_menu_item_mark_drawable">@drawable/ui_s_dialog_check_mark</item>
+        <item name="ui_dialog_menu_item_check_drawable">@drawable/ui_s_checkbox</item>
+        <item name="ui_dialog_menu_item_check_mark_margin_hor">6dp</item>
+    </style>
+
+    <!--********************* Tip *********************-->
+    <!-- 提示更新小圆点 -->
+    <style name="UI.TipPoint">
+        <item name="android:layout_width">@dimen/ui_tips_point_size</item>
+        <item name="android:layout_height">@dimen/ui_tips_point_size</item>
+        <item name="android:background">@drawable/ui_tips_point</item>
+    </style>
+
+    <!-- 提示更新new -->
+    <style name="UI.TipNew">
+        <item name="android:layout_width">37dp</item>
+        <item name="android:layout_height">17dp</item>
+        <item name="android:background">@drawable/ui_icon_tip_new</item>
+    </style>
+
+    <!-- UIPullRefreshLayout -->
+    <style name="UI.PullRefreshLayout">
+        <item name="ui_target_init_offset">0dp</item>
+        <item name="ui_target_refresh_offset">72dp</item>
+        <item name="ui_auto_calculate_refresh_init_offset">true</item>
+        <item name="ui_auto_calculate_refresh_end_offset">true</item>
+    </style>
+
+    <!-- UIRadiusImageView -->
+    <style name="UI.RadiusImageView">
+        <item name="ui_border_width">1px</item>
+        <item name="ui_border_color">?attr/ui_config_color_gray_4</item>
+        <item name="ui_is_touch_select_mode_enabled">true</item>
+    </style>
+
+    <!-- UIFaceView -->
+    <style name="UI.FaceView">
+        <item name="android:textColor">?attr/ui_config_color_black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="ui_special_drawable_padding">5dp</item>
+    </style>
+
+    <style name="UI.Animation" parent="@android:style/Animation"/>
+
+    <style name="UI.Animation.PopUpMenu"/>
+
+    <style name="UI.Animation.PopUpMenu.Center">
+        <item name="android:windowEnterAnimation">@anim/grow_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/shrink_from_top</item>
+    </style>
+
+    <style name="UI.Animation.PopUpMenu.Left">
+        <item name="android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
+        <item name="android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
+    </style>
+
+    <style name="UI.Animation.PopUpMenu.Right">
+        <item name="android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+        <item name="android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+    </style>
+
+    <style name="UI.Animation.PopDownMenu"/>
+
+    <style name="UI.Animation.PopDownMenu.Center">
+        <item name="android:windowEnterAnimation">@anim/grow_from_top</item>
+        <item name="android:windowExitAnimation">@anim/shrink_from_bottom</item>
+    </style>
+
+    <style name="UI.Animation.PopDownMenu.Left">
+        <item name="android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+        <item name="android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+    </style>
+
+    <style name="UI.Animation.PopDownMenu.Right">
+        <item name="android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+        <item name="android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+    </style>
+
+</resources>

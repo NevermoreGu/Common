@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 关于Theme的继承关系：
+    由于 Theme 需要在不同 API Level 下有不同的配置，并且继承自不同的系统 Theme，所以多层继承。
+    
+    继承关系和每个层的分工如下：
+	AppRootTheme（Theme 的最顶层，各个 API Level 自行决定继承自系统的哪个 Theme）
+	  |-values
+	  |-values-v21
+	  |-values-...
+	  |
+	AppBaseTheme（基础 Theme，定义所有公用的 style。）
+	  |-values
+	  |
+	AppConfigTheme（可配置的 Theme，各个 API Level 自行配置各自的 style 差异。）
+	  |-values
+	  |-values-v21
+	  |-values-...
+	  |
+	UI（UI提供的theme控制， 供外界使用）
+	
+	So，
+	如果要对某 API Level 配置继承自某个系统的 Theme，在 values-v* 目录下修改 ui_themes.xml 的 AppRootTheme。
+	如果要对某 API Level 配置定制化的 Theme，在 values-v* 目录下修改 ui_themes.xml 的 AppConfigTheme。
+	如果在项目中要对特定项目配置业务相关的 Theme，在 values 目录下修改 themes.xml 的 AppTheme。
+     -->
+    <style name="AppRootTheme" parent="android:Theme.Holo.Light"/>
+    <style name="AppBaseTheme" parent="AppRootTheme">
+        <item name="android:listDivider">@drawable/ui_divider</item>
+        <item name="android:listViewStyle">@style/ListView</item>
+        <item name="android:gridViewStyle">@style/GridView</item>
+        <item name="android:imageButtonStyle">@style/ImageButton</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextView</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView</item>
+        <item name="android:textViewStyle">@style/TextView</item>
+    </style>
+
+    <style name="AppConfigTheme" parent="AppBaseTheme" />
+
+    <style name="UI" parent="AppConfigTheme">
+        <item name="ui_content_padding_horizontal">@dimen/ui_content_padding_horizontal</item> <!-- 已废弃 -->
+        <item name="ui_content_spacing_horizontal">@dimen/ui_content_spacing_horizontal</item>
+
+        <!--**********************************************
+        *                ui common color               *
+        **********************************************-->
+        <item name="ui_config_color_blue">@color/ui_config_color_blue</item>
+        <item name="ui_config_color_red">@color/ui_config_color_red</item>
+        <item name="ui_config_color_separator">@color/ui_config_color_separator</item>
+        <item name="ui_config_color_separator_darken">@color/ui_config_color_separator_darken</item>
+        <item name="ui_config_color_background">@color/ui_config_color_background</item>
+        <item name="ui_config_color_background_pressed">@color/ui_config_color_background_pressed</item>
+        <item name="ui_config_color_black">@color/ui_config_color_black</item>
+        <item name="ui_config_color_link">@color/ui_config_color_link</item>
+        <item name="ui_config_color_pressed">@color/ui_config_color_pressed</item>
+
+        <item name="ui_config_color_gray_1">@color/ui_config_color_gray_1</item>
+        <item name="ui_config_color_gray_2">@color/ui_config_color_gray_2</item>
+        <item name="ui_config_color_gray_3">@color/ui_config_color_gray_3</item>
+        <item name="ui_config_color_gray_4">@color/ui_config_color_gray_4</item>
+        <item name="ui_config_color_gray_5">@color/ui_config_color_gray_5</item>
+        <item name="ui_config_color_gray_6">@color/ui_config_color_gray_6</item>
+        <item name="ui_config_color_gray_7">@color/ui_config_color_gray_7</item>
+        <item name="ui_config_color_gray_8">@color/ui_config_color_gray_8</item>
+        <item name="ui_config_color_gray_9">@color/ui_config_color_gray_9</item>
+
+        <item name="ui_alpha_pressed">0.5</item>
+        <item name="ui_alpha_disabled">0.5</item>
+
+        <item name="ui_general_shadow_elevation">14dp</item>
+        <item name="ui_general_shadow_alpha">0.25</item>
+
+        <!--**********************************************
+        *                ui dialog                     *
+        **********************************************-->
+        <item name="ui_dialog_min_width">260dp</item>
+        <item name="ui_dialog_max_width">304dp</item>
+        <item name="ui_dialog_bg">@drawable/ui_dialog_bg</item>
+        <item name="ui_dialog_radius">@dimen/ui_dialog_radius</item>
+        <item name="ui_dialog_margin_vertical">20dp</item>
+        <item name="ui_dialog_padding_horizontal">24dp</item>
+        <item name="ui_dialog_background_dim_amount">0.6</item>
+        <item name="ui_dialog_wrapper_style">@style/UI.Dialog.Wrapper</item>
+        <item name="ui_dialog_title_style">@style/UI.Dialog.Title</item>
+        <item name="ui_dialog_action_container_style">@style/UI.Dialog.ActionContainer</item>
+        <item name="ui_dialog_action_style">@style/UI.Dialog.Action</item>
+        <item name="ui_dialog_message_content_style">@style/UI.Dialog.MessageContent</item>
+        <item name="ui_dialog_edit_content_style">@style/UI.Dialog.EditContent</item>
+        <item name="ui_dialog_menu_container_style">@style/UI.Dialog.MenuContainer</item>
+        <item name="ui_dialog_menu_item_style">@style/UI.Dialog_MenuItem</item>
+
+        <!-- tip -->
+        <item name="ui_tip_dialog_bg">@drawable/ui_tip_dialog_bg</item>
+        <item name="ui_tip_dialog_min_width">120dp</item>
+        <item name="ui_tip_dialog_min_height">56dp</item>
+        <item name="ui_tip_dialog_margin_horizontal">?attr/ui_content_spacing_horizontal</item>
+        <item name="ui_tip_dialog_padding_vertical">12dp</item>
+        <item name="ui_tip_dialog_padding_horizontal">?attr/ui_content_padding_horizontal</item>
+
+
+        <!--**********************************************
+        *              ui common list                  *
+        **********************************************-->
+
+        <item name="ui_common_list_item_icon_margin_right">12dp</item>
+        <item name="ui_common_list_item_accessory_margin_left">14dp</item>
+        <item name="ui_common_list_item_title_v_text_size">15sp</item>
+        <item name="ui_common_list_item_title_h_text_size">16sp</item>
+        <item name="ui_common_list_item_h_space_min_width">14dp</item>
+        <item name="ui_common_list_item_detail_v_text_size">13sp</item>
+        <item name="ui_common_list_item_detail_h_text_size">14sp</item>
+        <item name="ui_common_list_item_detail_line_space">5dp</item>
+
+        <!--**********************************************
+        *             ui list item bg                  *
+        **********************************************-->
+        <item name="ui_list_item_height">@dimen/ui_list_item_height</item>
+        <item name="ui_list_item_height_higher">@dimen/ui_list_item_height_higher</item>
+
+        <item name="ui_list_item_bg_with_border_bottom">@drawable/ui_list_item_bg_with_border_bottom</item>
+        <item name="ui_list_item_bg_with_border_bottom_pressed">@drawable/ui_list_item_bg_with_border_bottom_pressed</item>
+        <item name="ui_list_item_bg_with_border_bottom_inset_left">@drawable/ui_list_item_bg_with_border_bottom_inset_left</item>
+        <item name="ui_list_item_bg_with_border_bottom_inset_left_pressed">@drawable/ui_list_item_bg_with_border_bottom_inset_left_pressed</item>
+        <item name="ui_list_item_bg_with_border_top">@drawable/ui_list_item_bg_with_border_top</item>
+        <item name="ui_list_item_bg_with_border_top_pressed">@drawable/ui_list_item_bg_with_border_top_pressed</item>
+        <item name="ui_list_item_bg_with_border_top_inset_left">@drawable/ui_list_item_bg_with_border_top_inset_left</item>
+        <item name="ui_list_item_bg_with_border_top_inset_left_pressed">@drawable/ui_list_item_bg_with_border_top_inset_left_pressed</item>
+        <item name="ui_list_item_bg_with_border_double">@drawable/ui_list_item_bg_with_double_border</item>
+        <item name="ui_list_item_bg_with_border_double_pressed">@drawable/ui_list_item_bg_with_double_border_pressed</item>
+
+        <item name="ui_s_list_item_bg_with_border_bottom">@drawable/ui_s_list_item_bg_with_border_bottom</item>
+        <item name="ui_s_list_item_bg_with_border_bottom_inset">@drawable/ui_s_list_item_bg_with_border_bottom_inset</item>
+        <item name="ui_s_list_item_bg_with_border_bottom_inset_left">@drawable/ui_s_list_item_bg_with_border_bottom_inset_left</item>
+        <item name="ui_s_list_item_bg_with_border_top">@drawable/ui_s_list_item_bg_with_border_top</item>
+        <item name="ui_s_list_item_bg_with_border_top_inset_left">@drawable/ui_s_list_item_bg_with_border_top_inset_left</item>
+        <item name="ui_s_list_item_bg_with_border_double">@drawable/ui_s_list_item_bg_with_border_double</item>
+        <item name="ui_s_list_item_bg_with_border_none">@drawable/ui_s_list_item_bg_with_border_none</item>
+
+        <!--**********************************************
+        *             ui drawable                      *
+        ***********************************************-->
+        <item name="ui_s_checkbox">@drawable/ui_s_checkbox</item>
+        <item name="ui_icon_check_mark">@drawable/ui_icon_checkmark</item>
+
+        <!--**********************************************
+       *                   ui edit text                     *
+       ***********************************************-->
+
+        <item name="ui_edit_text_height">48dp</item>
+
+        <!--**********************************************
+        *                   ui btn                     *
+        ***********************************************-->
+        <item name="ui_round_btn_text_size">@dimen/ui_btn_text_size</item>
+        <item name="ui_round_btn_border_width">@dimen/ui_btn_border_width</item>
+        <item name="ui_round_btn_bg_color">@color/ui_btn_blue_bg</item>
+        <item name="ui_round_btn_border_color">@color/ui_btn_blue_border</item>
+        <item name="ui_round_btn_text_color">@color/ui_btn_blue_text</item>
+
+
+        <!--**********************************************
+        *                  ui topbar                   *
+        ***********************************************-->
+        <item name="ui_topbar_height">56dp</item>
+
+        <!--**********************************************
+        *                 ui bottom sheet              *
+        ***********************************************-->
+        <item name="ui_bottom_sheet_title_height">56dp</item>
+        <item name="ui_bottom_sheet_title_appearance">@style/UITextAppearance.Title.Gray</item>
+        <item name="ui_bottom_sheet_title_bg">?attr/ui_list_item_bg_with_border_bottom</item>
+
+        <item name="ui_bottom_sheet_list_item_padding_horizontal">?attr/ui_content_padding_horizontal</item>
+        <item name="ui_bottom_sheet_list_item_height">56dp</item>
+        <item name="ui_bottom_sheet_list_item_mark_margin_left">12dp</item>
+        <item name="ui_bottom_sheet_list_item_tip_point_margin_left">4dp</item>
+        <item name="ui_bottom_sheet_list_item_text_appearance">@style/UITextAppearance.ListItem</item>
+        <item name="ui_bottom_sheet_list_item_bg">?attr/ui_s_list_item_bg_with_border_bottom</item>
+        <item name="ui_bottom_sheet_list_item_icon_size">22dp</item>
+        <item name="ui_bottom_sheet_list_item_icon_margin_right">12dp</item>
+
+        <item name="ui_bottom_sheet_grid_padding_vertical">12dp</item>
+        <item name="ui_bottom_sheet_grid_line_padding_horizontal">12dp</item>
+        <item name="ui_bottom_sheet_grid_line_vertical_space">0dp</item>
+        <item name="ui_bottom_sheet_grid_item_mini_width">84dp</item>
+        <item name="ui_bottom_sheet_grid_item_paddingTop">0dp</item>
+        <item name="ui_bottom_sheet_grid_item_paddingBottom">8dp</item>
+        <item name="ui_bottom_sheet_grid_item_icon_size">56dp</item>
+        <item name="ui_bottom_sheet_grid_item_icon_marginTop">12dp</item>
+        <item name="ui_bottom_sheet_grid_item_icon_marginBottom">9dp</item>
+        <item name="ui_bottom_sheet_grid_item_text_appearance">@style/UITextAppearance.GridItem.Small</item>
+
+        <item name="ui_bottom_sheet_button_height">56dp</item>
+        <item name="ui_bottom_sheet_button_text_size">15sp</item>
+        <item name="ui_bottom_sheet_button_text_color">@color/ui_config_color_gray_2</item>
+        <item name="ui_bottom_sheet_button_background">@drawable/ui_divider_top_bitmap</item>
+
+        <!--**********************************************
+        *                 ui common list item          *
+        ***********************************************-->
+        <item name="ui_common_list_item_chevron">@drawable/ui_icon_chevron</item>
+        <item name="ui_common_list_item_switch">@drawable/ui_s_icon_switch</item>
+
+        <!--**********************************************
+        *               ui loading view                *
+        ***********************************************-->
+        <item name="ui_loading_size">20dp</item>
+        <item name="ui_loading_color">@color/ui_config_color_gray_5</item>
+
+        <!--**********************************************
+        *                   ui popup                   *
+        ***********************************************-->
+        <item name="ui_popup_bg">@drawable/ui_popup_bg</item>
+        <item name="ui_popup_arrow_down">@drawable/ui_popup_arrow_down</item>
+        <item name="ui_popup_arrow_up">@drawable/ui_popup_arrow_up</item>
+        <item name="ui_popup_arrow_up_margin_top">13dp</item>
+        <item name="ui_popup_arrow_down_margin_bottom">13dp</item>
+
+       <!--**********************************************
+       *                  ui tabSegment               *
+       ***********************************************-->
+        <item name="ui_tab_sign_count_view">@style/ui_tab_sign_count_view</item>
+        <item name="ui_tab_sign_count_view_minSize">@dimen/ui_tab_sign_count_view_minSize</item>
+        <item name="ui_tab_sign_count_view_minSize_with_text">@dimen/ui_tab_sign_count_view_minSize_with_text</item>
+        <item name="ui_tab_sign_count_view_bg">@drawable/ui_sign_count_view_bg</item>
+        <item name="ui_tab_sign_count_view_padding_horizontal">4dp</item>
+
+        <!--**********************************************
+        *               ui 提供的控件样式                *
+        ***********************************************-->
+        <item name="UIButtonStyle">@style/UI.RoundButton</item>
+        <item name="UITabSegmentStyle">@style/UI.TabSegment</item>
+        <item name="UIGroupListViewStyle">@style/UI.GroupListView</item>
+        <item name="UICommonListItemViewStyle">@style/UI.CommonListItemView</item>
+        <item name="UIGroupListSectionViewStyle">@style/UI.GroupListSectionView</item>
+        <item name="UITopBarStyle">@style/UI.TopBar</item>
+
+        <item name="UITipPointStyle">@style/UI.TipPoint</item>
+        <item name="UITipNewStyle">@style/UI.TipNew</item>
+
+        <item name="UILoadingStyle">@style/UI.Loading</item>
+        <item name="UIPullRefreshLayoutStyle">@style/UI.PullRefreshLayout</item>
+        <item name="UIRadiusImageViewStyle">@style/UI.RadiusImageView</item>
+        <item name="UIFaceStyle">@style/UI.FaceView</item>
+    </style>
+
+    <style name="UI.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ActionBarBase" parent="android:Widget.Holo.Light.ActionBar" />
+    <style name="ActionBarTitleTextBase" parent="android:TextAppearance.Holo.Widget.ActionBar.Title" />
+    <style name="ListViewBase" parent="android:Widget.Holo.Light.ListView" />
+    <style name="GridViewBase" parent="android:Widget.Holo.Light.GridView" />
+    <style name="ImageButtonBase" parent="android:Widget.Holo.Light.ImageButton" />
+    <style name="ButtonBase" parent="android:Widget.Holo.Light.Button"/>
+    <style name="EditTextBase" parent="android:Widget.Holo.Light.EditText" />
+    <style name="AutoCompleteTextViewBase" parent="android:Widget.Holo.Light.AutoCompleteTextView" />
+    <style name="DropDownListViewBase" parent="android:Widget.Holo.Light.ListView.DropDown" />
+    <style name="TextAppearanceBase" parent="android:TextAppearance.Holo"/>
+
+    <!--<style name="Animation" parent="Animation">-->
+    <!--<item name="android:fragmentOpenEnterAnimation">@animator/fragment_open_enter</item>-->
+    <!--<item name="android:fragmentOpenExitAnimation">@animator/fragment_open_exit</item>-->
+    <!--<item name="android:fragmentCloseEnterAnimation">@animator/fragment_close_enter</item>-->
+    <!--<item name="android:fragmentCloseExitAnimation">@animator/fragment_close_enter</item>-->
+    <!--</style>-->
+
+
+
+    <!-- ListView Start -->
+    <style name="ListView" parent="ListViewBase">
+        <item name="android:background">@color/ui_config_color_transparent</item>
+        <item name="android:listSelector">@color/ui_config_color_transparent</item>
+        <item name="android:divider">@drawable/ui_divider_bottom_bitmap</item>
+        <item name="android:dividerHeight">@dimen/ui_list_divider_height</item>
+    </style>
+    <!-- ListView End -->
+
+    <!-- GridView -->
+    <style name="GridView" parent="GridViewBase">
+        <item name="android:background">@color/ui_config_color_transparent</item>
+        <item name="android:listSelector">@color/ui_config_color_transparent</item>
+    </style>
+
+    <style name="ImageButton" parent="ImageButtonBase">
+        <item name="android:background">@color/ui_config_color_transparent</item>
+    </style>
+
+    <style name="Button" parent="ButtonBase"/>
+
+    <style name="EditText" parent="EditTextBase">
+        <item name="android:textColor">?attr/ui_config_color_gray_1</item>
+        <item name="android:textColorHint">?attr/ui_config_color_gray_4</item>
+        <!-- 光标颜色与textColor一致，若要自定义，应该用ShapeDrawable，不能简单指定一个color -->
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="TextView" parent="android:Widget.TextView">
+        <item name="android:textAppearance">@style/UITextAppearance</item>
+        <!-- textColorHighlight 放在appearance中无效，好像TextView总是默认存在一个textColorHighlight
+             会覆盖掉它，并不知道原因 -->
+        <item name="android:textColorHighlight">?attr/ui_config_color_background_pressed</item>
+    </style>
+
+    <style name="AutoCompleteTextView" parent="AutoCompleteTextViewBase">
+        <item name="android:textColor">?attr/ui_config_color_gray_1</item>
+        <item name="android:textColorHint">?attr/ui_config_color_gray_4</item>
+        <!-- 光标颜色与textColor一致，若要自定义，应该用ShapeDrawable，不能简单指定一个color -->
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <!-- 下拉列表，例如AutoCompleteTextView的补全列表 -->
+    <style name="DropDownListView" parent="DropDownListViewBase">
+        <item name="android:divider">@drawable/ui_divider_bottom_bitmap</item>
+        <item name="android:dividerHeight">@dimen/ui_list_divider_height</item>
+        <item name="android:background">@color/ui_config_color_white</item>
+    </style>
+
+
+</resources>

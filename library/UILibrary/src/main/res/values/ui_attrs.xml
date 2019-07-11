@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="ui_backgroundColor" format="color"/>
+    <attr name="ui_borderColor" format="color"/>
+    <attr name="ui_borderWidth" format="dimension"/>
+    <attr name="ui_linkColor" format="color"/>
+    <attr name="ui_orientation" format="enum">
+        <enum name="horizontal" value="0"/>
+        <enum name="vertical" value="1"/>
+    </attr>
+    <attr name="ui_title" format="string"/>
+
+    <declare-styleable name="UILayout">
+        <attr name="android:maxWidth"/>
+        <attr name="android:maxHeight"/>
+        <attr name="android:minWidth"/>
+        <attr name="android:minHeight"/>
+        <attr name="ui_bottomDividerHeight" format="dimension"/>
+        <attr name="ui_bottomDividerColor" format="color|reference"/>
+        <attr name="ui_bottomDividerInsetLeft" format="dimension"/>
+        <attr name="ui_bottomDividerInsetRight" format="dimension"/>
+        <attr name="ui_topDividerHeight" format="dimension"/>
+        <attr name="ui_topDividerColor" format="color|reference"/>
+        <attr name="ui_topDividerInsetLeft" format="dimension"/>
+        <attr name="ui_topDividerInsetRight" format="dimension"/>
+        <attr name="ui_leftDividerWidth" format="dimension"/>
+        <attr name="ui_leftDividerColor" format="color|reference"/>
+        <attr name="ui_leftDividerInsetTop" format="dimension"/>
+        <attr name="ui_leftDividerInsetBottom" format="dimension"/>
+        <attr name="ui_rightDividerWidth" format="dimension"/>
+        <attr name="ui_rightDividerColor" format="color|reference"/>
+        <attr name="ui_rightDividerInsetTop" format="dimension"/>
+        <attr name="ui_rightDividerInsetBottom" format="dimension"/>
+        <attr name="ui_radius"/>
+        <attr name="ui_borderColor"/>
+        <attr name="ui_borderWidth"/>
+        <attr name="ui_outerNormalColor" format="color|reference"/>
+        <attr name="ui_hideRadiusSide" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="bottom" value="3"/>
+            <enum name="left" value="4"/>
+        </attr>
+        <attr name="ui_showBorderOnlyBeforeL" format="boolean"/>
+        <attr name="ui_shadowElevation" format="dimension"/>
+        <attr name="ui_useThemeGeneralShadowElevation" format="boolean"/>
+        <attr name="ui_shadowAlpha" format="float"/>
+        <attr name="ui_outlineInsetTop" format="dimension"/>
+        <attr name="ui_outlineInsetLeft" format="dimension"/>
+        <attr name="ui_outlineInsetRight" format="dimension"/>
+        <attr name="ui_outlineInsetBottom" format="dimension"/>
+        <attr name="ui_outlineExcludePadding" format="boolean"/>
+    </declare-styleable>
+
+    <!--**************** UITabSegment ******************-->
+    <declare-styleable name="UITabSegment">
+        <attr name="ui_tab_indicator_height" format="dimension"/>
+        <attr name="ui_tab_has_indicator" format="boolean"/>
+        <attr name="ui_tab_indicator_top" format="boolean"/>
+        <attr name="ui_tab_indicator_with_follow_content" format="boolean"/>
+        <attr name="android:textSize"/>
+        <attr name="ui_tab_normal_text_size" format="dimension"/>
+        <attr name="ui_tab_selected_text_size" format="dimension"/>
+        <attr name="ui_tab_normal_color" format="color|reference"/>
+        <attr name="ui_tab_selected_color" format="color|reference"/>
+        <attr name="ui_tab_mode" format="enum">
+            <enum name="scrollable" value="0"/>
+            <enum name="fixed" value="1"/>
+        </attr>
+        <attr name="ui_tab_space" format="dimension"/>
+        <attr name="ui_tab_icon_position" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="bottom" value="3"/>
+        </attr>
+    </declare-styleable>
+    <attr name="UITabSegmentStyle" format="reference"/>
+
+    <!--************** UIGroupListView **************-->
+    <declare-styleable name="UIGroupListView">
+        <attr name="separatorStyle" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="none" value="1"/>
+        </attr>
+    </declare-styleable>
+    <attr name="UIGroupListViewStyle" format="reference"/>
+    <attr name="UICommonListItemViewStyle" format="reference"/>
+    <attr name="ui_common_list_item_chevron" format="reference"/>
+    <attr name="ui_common_list_item_switch" format="reference"/>
+    <declare-styleable name="UICommonListItemView">
+        <attr name="ui_orientation"/>
+        <attr name="ui_accessory_type" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="chevron" value="1"/>
+            <enum name="switcher" value="2"/>
+            <enum name="custom" value="3"/>
+        </attr>
+        <attr name="ui_commonList_titleColor" format="color"/>
+        <attr name="ui_commonList_detailColor" format="color"/>
+    </declare-styleable>
+    <attr name="UIGroupListSectionViewStyle" format="reference"/>
+
+
+    <!--************ 更新小红点与 new 的样式配置 ***********-->
+    <attr name="UITipPointStyle" format="reference"/>
+    <attr name="UITipNewStyle" format="reference"/>
+
+    <!--************ UILoading ***********-->
+    <declare-styleable name="UILoadingView">
+        <attr name="ui_loading_view_size" format="dimension"/>
+        <attr name="android:color"/>
+    </declare-styleable>
+    <attr name="UILoadingStyle" format="reference"/>
+
+    <!--************ UITopBar ***********-->
+    <declare-styleable name="UITopBar">
+        <attr name="ui_topbar_title_gravity" format="enum">
+            <enum name="left_center" value="19"/>
+            <enum name="center" value="17"/>
+        </attr>
+        <attr name="ui_topbar_need_separator" format="boolean"/>
+        <attr name="ui_topbar_separator_color" format="color"/>
+        <attr name="ui_topbar_separator_height" format="dimension"/>
+        <attr name="ui_topbar_bg_color" format="color"/>
+        <attr name="ui_topbar_left_back_drawable_id" format="reference"/>
+        <attr name="ui_topbar_title_text_size" format="dimension"/>
+        <attr name="ui_topbar_title_text_size_with_subtitle" format="dimension"/>
+        <attr name="ui_topbar_subtitle_text_size" format="dimension"/>
+        <attr name="ui_topbar_title_color" format="color"/>
+        <attr name="ui_topbar_subtitle_color" format="color"/>
+        <attr name="ui_topbar_title_margin_horizontal_when_no_btn_aside" format="dimension"/>
+        <attr name="ui_topbar_title_container_padding_horizontal" format="dimension"/>
+        <attr name="ui_topbar_image_btn_width" format="dimension"/>
+        <attr name="ui_topbar_image_btn_height" format="dimension"/>
+        <attr name="ui_topbar_text_btn_padding_horizontal" format="dimension"/>
+        <attr name="ui_topbar_text_btn_color_state_list" format="reference"/>
+        <attr name="ui_topbar_text_btn_text_size" format="dimension"/>
+    </declare-styleable>
+    <attr name="UITopBarStyle" format="reference"/>
+
+    <!--**************** UIPullRefreshLayout ******************-->
+    <declare-styleable name="UIPullRefreshLayout">
+        <!-- RefreshView的初始offset -->
+        <attr name="ui_refresh_init_offset" format="dimension"/>
+        <!-- 刷新时RefreshView的offset -->
+        <attr name="ui_refresh_end_offset" format="dimension"/>
+        <!-- TargetView(ListView或者ScrollView等)的初始位置 -->
+        <attr name="ui_target_init_offset" format="dimension"/>
+        <!-- 刷新时TargetView(ListView或者ScrollView等)的位置-->
+        <attr name="ui_target_refresh_offset" format="dimension"/>
+        <!-- 是否自动根据RefreshView的高度计算RefreshView的初始位置-->
+        <attr name="ui_auto_calculate_refresh_init_offset" format="boolean"/>
+        <!-- 是否自动根据TargetView在刷新时的位置计算RefreshView的结束位置-->
+        <attr name="ui_auto_calculate_refresh_end_offset" format="boolean"/>
+        <!-- TargetView的刷新位置与RefreshView高度相等-->
+        <attr name="ui_equal_target_refresh_offset_to_refresh_view_height" format="boolean"/>
+    </declare-styleable>
+    <attr name="UIPullRefreshLayoutStyle" format="reference"/>
+
+    <!--************** UIRadiusImageView ****************-->
+    <attr name="ui_border_width" format="dimension"/>
+    <attr name="ui_border_color" format="color"/>
+    <declare-styleable name="UIRadiusImageView">
+        <attr name="ui_border_width"/>
+        <attr name="ui_border_color"/>
+        <attr name="ui_selected_mask_color" format="color"/>
+        <attr name="ui_selected_border_color" format="color"/>
+        <attr name="ui_selected_border_width" format="dimension"/>
+        <attr name="ui_corner_radius" format="dimension"/>
+        <attr name="ui_is_oval" format="boolean"/>
+        <attr name="ui_is_circle" format="boolean"/>
+        <attr name="ui_is_touch_select_mode_enabled" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="UIRadiusImageView2">
+        <attr name="ui_border_width"/>
+        <attr name="ui_border_color"/>
+        <attr name="ui_selected_mask_color"/>
+        <attr name="ui_selected_border_color"/>
+        <attr name="ui_selected_border_width"/>
+        <attr name="ui_corner_radius"/>
+        <attr name="ui_is_circle"/>
+        <attr name="ui_is_touch_select_mode_enabled"/>
+    </declare-styleable>
+    <attr name="UIRadiusImageViewStyle" format="reference"/>
+
+    <!--************** UIFaceView ****************-->
+    <declare-styleable name="UIFaceView">
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="android:singleLine"/>
+        <attr name="android:maxLines"/>
+        <attr name="android:lineSpacingExtra"/>
+        <attr name="android:ellipsize"/>
+        <attr name="android:maxWidth"/>
+        <attr name="android:text"/>
+        <attr name="ui_special_drawable_padding" format="dimension"/>
+        <attr name="ui_more_action_text" format="string"/>
+        <attr name="ui_more_action_color" format="color"/>
+    </declare-styleable>
+    <attr name="UIFaceStyle" format="reference"/>
+
+    <!-- UIFloatLayout start -->
+    <attr name="ui_childHorizontalSpacing" format="dimension"/>
+    <attr name="ui_childVerticalSpacing" format="dimension"/>
+    <attr name="ui_maxNumber" format="integer"/>
+    <declare-styleable name="UIFloatLayout">
+        <attr name="android:gravity"/>
+        <attr name="ui_childHorizontalSpacing"/>
+        <attr name="ui_childVerticalSpacing"/>
+        <attr name="android:maxLines"/>
+        <attr name="ui_maxNumber"/>
+    </declare-styleable>
+    <!-- UIFloatLayout end -->
+
+    <!-- EmptyView start -->
+    <declare-styleable name="UIEmptyView">
+        <attr name="ui_show_loading" format="boolean"/>
+        <attr name="ui_title_text" format="string"/>
+        <attr name="ui_detail_text" format="string"/>
+        <attr name="ui_btn_text" format="string"/>
+    </declare-styleable>
+    <!-- EmptyView end -->
+
+    <!-- UIProgressBar start -->
+    <declare-styleable name="UIProgressBar">
+        <attr name="ui_type" format="enum">
+            <enum name="type_rect" value="0"/>
+            <enum name="type_circle" value="1"/>
+        </attr>
+        <attr name="ui_progress_color" format="color"/>
+        <attr name="ui_background_color" format="color"/>
+        <attr name="ui_max_value" format="integer"/>
+        <attr name="ui_value" format="integer"/>
+        <attr name="ui_stroke_width" format="dimension"/>
+        <attr name="ui_stroke_round_cap" format="boolean"/>
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+    </declare-styleable>
+    <!-- UIProgressBar end -->
+
+    <!-- FontFitTextView start -->
+    <attr name="ui_minTextSize" format="dimension"/>
+    <attr name="ui_maxTextSize" format="dimension"/>
+    <declare-styleable name="UIFontFitTextView">
+        <attr name="ui_minTextSize"/>
+        <attr name="ui_maxTextSize"/>
+    </declare-styleable>
+    <!-- FontFitTextView end -->
+
+    <declare-styleable name="UILinkTextView">
+        <attr name="ui_linkBackgroundColor" format="color"/>
+        <attr name="ui_linkTextColor" format="color"/>
+    </declare-styleable>
+
+    <!-- RoundWidget start -->
+
+    <!-- 圆角是否要自适应为 View 高度的一半 -->
+    <attr name="ui_isRadiusAdjustBounds" format="boolean"/>
+    <!-- 同时指定四个方向的圆角大小 -->
+    <attr name="ui_radius" format="dimension"/>
+    <!-- 指定左上方圆角的大小 -->
+    <attr name="ui_radiusTopLeft" format="dimension"/>
+    <!-- 指定右上方圆角的大小 -->
+    <attr name="ui_radiusTopRight" format="dimension"/>
+    <!-- 指定左下方圆角的大小 -->
+    <attr name="ui_radiusBottomLeft" format="dimension"/>
+    <!-- 指定右下方圆角的大小 -->
+    <attr name="ui_radiusBottomRight" format="dimension"/>
+
+    <attr name="UIButtonStyle" format="reference"/>
+
+    <declare-styleable name="UIRoundButton">
+        <attr name="ui_backgroundColor"/>
+        <attr name="ui_borderColor"/>
+        <attr name="ui_borderWidth"/>
+        <attr name="ui_isRadiusAdjustBounds"/>
+        <attr name="ui_radius"/>
+        <attr name="ui_radiusTopLeft"/>
+        <attr name="ui_radiusTopRight"/>
+        <attr name="ui_radiusBottomLeft"/>
+        <attr name="ui_radiusBottomRight"/>
+    </declare-styleable>
+
+    <declare-styleable name="UIRoundButtonRipple">
+        <attr name="ui_backgroundColor"/>
+        <attr name="ui_borderColor"/>
+        <attr name="ui_borderWidth"/>
+        <attr name="ui_isRadiusAdjustBounds"/>
+        <attr name="ui_radius"/>
+        <attr name="ui_radiusTopLeft"/>
+        <attr name="ui_radiusTopRight"/>
+        <attr name="ui_radiusBottomLeft"/>
+        <attr name="ui_radiusBottomRight"/>
+    </declare-styleable>
+
+    <declare-styleable name="UIRoundFrameLayout">
+        <attr name="ui_backgroundColor"/>
+        <attr name="ui_borderColor"/>
+        <attr name="ui_borderWidth"/>
+        <attr name="ui_isRadiusAdjustBounds"/>
+        <attr name="ui_radius"/>
+        <attr name="ui_radiusTopLeft"/>
+        <attr name="ui_radiusTopRight"/>
+        <attr name="ui_radiusBottomLeft"/>
+        <attr name="ui_radiusBottomRight"/>
+    </declare-styleable>
+
+    <declare-styleable name="UIRoundLinearLayout">
+        <attr name="ui_backgroundColor"/>
+        <attr name="ui_borderColor"/>
+        <attr name="ui_borderWidth"/>
+        <attr name="ui_isRadiusAdjustBounds"/>
+        <attr name="ui_radius"/>
+        <attr name="ui_radiusTopLeft"/>
+        <attr name="ui_radiusTopRight"/>
+        <attr name="ui_radiusBottomLeft"/>
+        <attr name="ui_radiusBottomRight"/>
+    </declare-styleable>
+
+    <declare-styleable name="UIRoundRelativeLayout">
+        <attr name="ui_backgroundColor"/>
+        <attr name="ui_borderColor"/>
+        <attr name="ui_borderWidth"/>
+        <attr name="ui_isRadiusAdjustBounds"/>
+        <attr name="ui_radius"/>
+        <attr name="ui_radiusTopLeft"/>
+        <attr name="ui_radiusTopRight"/>
+        <attr name="ui_radiusBottomLeft"/>
+        <attr name="ui_radiusBottomRight"/>
+    </declare-styleable>
+
+    <!-- RoundWidget end -->
+
+    <!-- UICollapsingTopBarLayout start -->
+    <declare-styleable name="UICollapsingTopBarLayout">
+        <attr name="ui_expandedTitleMargin" format="dimension"/>
+        <attr name="ui_expandedTitleMarginStart" format="dimension"/>
+        <attr name="ui_expandedTitleMarginTop" format="dimension"/>
+        <attr name="ui_expandedTitleMarginEnd" format="dimension"/>
+        <attr name="ui_expandedTitleMarginBottom" format="dimension"/>
+        <attr name="ui_expandedTitleTextAppearance" format="reference"/>
+        <attr name="ui_collapsedTitleTextAppearance" format="reference"/>
+        <attr name="ui_contentScrim" format="color"/>
+        <attr name="ui_statusBarScrim" format="color"/>
+        <attr name="ui_topBarId" format="reference"/>
+        <attr name="ui_scrimVisibleHeightTrigger" format="dimension"/>
+        <attr name="ui_scrimAnimationDuration" format="integer"/>
+        <attr name="ui_collapsedTitleGravity">
+            <flag name="top" value="0x30"/>
+            <flag name="bottom" value="0x50"/>
+            <flag name="left" value="0x03"/>
+            <flag name="right" value="0x05"/>
+            <flag name="center_vertical" value="0x10"/>
+            <flag name="fill_vertical" value="0x70"/>
+            <flag name="center_horizontal" value="0x01"/>
+            <flag name="center" value="0x11"/>
+            <flag name="start" value="0x00800003"/>
+            <flag name="end" value="0x00800005"/>
+        </attr>
+        <attr name="ui_expandedTitleGravity">
+            <flag name="top" value="0x30"/>
+            <flag name="bottom" value="0x50"/>
+            <flag name="left" value="0x03"/>
+            <flag name="right" value="0x05"/>
+            <flag name="center_vertical" value="0x10"/>
+            <flag name="fill_vertical" value="0x70"/>
+            <flag name="center_horizontal" value="0x01"/>
+            <flag name="center" value="0x11"/>
+            <flag name="start" value="0x00800003"/>
+            <flag name="end" value="0x00800005"/>
+        </attr>
+        <attr name="ui_titleEnabled" format="boolean"/>
+        <attr name="ui_title"/>
+    </declare-styleable>
+    <declare-styleable name="UICollapsingTopBarLayout_Layout">
+        <attr name="ui_layout_collapseMode">
+            <enum name="none" value="0"/>
+            <enum name="pin" value="1"/>
+            <enum name="parallax" value="2"/>
+        </attr>
+        <attr name="ui_layout_collapseParallaxMultiplier" format="float"/>
+    </declare-styleable>
+    <!-- UICollapsingTopBarLayout end -->
+
+    <declare-styleable name="UIPriorityLinearLayout_Layout">
+        <attr name="ui_layout_priority" format="enum">
+            <enum name="disposable" value="1"/>
+            <enum name="mini_content_protection" value="2"/>
+            <enum name="incompressible" value="3"/>
+        </attr>
+        <attr name="ui_layout_miniContentProtectionSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="UITextAppearance">
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textColorHint"/>
+        <attr name="android:textStyle"/>
+        <attr name="android:typeface"/>
+        <attr name="textAllCaps"/>
+        <attr name="android:shadowColor"/>
+        <attr name="android:shadowDy"/>
+        <attr name="android:shadowDx"/>
+        <attr name="android:shadowRadius"/>
+    </declare-styleable>
+
+    <declare-styleable name="UICircleImageView">
+        <attr name="ui_civ_border_width" format="dimension"/>
+        <attr name="ui_civ_border_color" format="color"/>
+        <attr name="ui_civ_border_overlay" format="boolean"/>
+        <attr name="ui_civ_fill_color" format="color"/>
+    </declare-styleable>
+
+</resources>

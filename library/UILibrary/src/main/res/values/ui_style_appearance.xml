@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="UITextAppearance" parent="TextAppearanceBase">
+        <item name="android:textColor">?attr/ui_config_color_black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHighlight">?attr/ui_config_color_background_pressed</item>
+    </style>
+
+    <style name="UITextAppearance.Title"/>
+    <style name="UITextAppearance.Title.Gray">
+        <item name="android:textColor">?attr/ui_config_color_gray_3</item>
+    </style>
+    <style name="UITextAppearance.Title.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="UITextAppearance.ListItem">
+        <item name="android:textColor">@color/ui_s_list_item_text_color</item>
+    </style>
+
+    <style name="UITextAppearance.GridItem"/>
+    <style name="UITextAppearance.GridItem.Small">
+        <item name="android:textColor">@color/ui_config_color_gray_3</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+</resources>

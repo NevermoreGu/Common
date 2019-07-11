@@ -1,0 +1,8 @@
+package com.batman.logincomponent;
+
+
+
+public interface UserInterface {
+
+    void getUserInfo();
+}
