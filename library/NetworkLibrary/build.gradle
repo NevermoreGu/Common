@@ -35,6 +35,12 @@ android {
     }
 
     publishNonDefault true
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {

@@ -60,6 +60,9 @@ dependencies {
     api project(':NetworkLibrary')
     api project(':ShareLibrary')
     api project(':ZXingLibrary')
+    api project(':ImageLibrary')
+    api project(':UtilsLibrary')
+
     api 'com.android.support:multidex:1.0.1'
     //RxPermissions
     api 'com.github.tbruyelle:rxpermissions:0.10.2'

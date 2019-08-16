@@ -76,6 +76,8 @@
             <enum name="right" value="2"/>
             <enum name="bottom" value="3"/>
         </attr>
+
+        <attr name="ui_tab_typeface_provider" format="string"/>
     </declare-styleable>
     <attr name="UITabSegmentStyle" format="reference"/>
 
