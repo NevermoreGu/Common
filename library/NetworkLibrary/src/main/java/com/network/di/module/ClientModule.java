@@ -96,13 +96,6 @@ public class ClientModule {
         return mApiUrl;
     }
 
-//    @Singleton
-//    @Provides
-//    Cache provideCache(File cacheFile) {
-//        return new Cache(cacheFile, HTTP_RESPONSE_DISK_CACHE_MAX_SIZE);//设置缓存路径和大小
-//    }
-
-
     @Singleton
     @Provides
     Interceptor provideIntercept() {
