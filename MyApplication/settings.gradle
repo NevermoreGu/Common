@@ -7,6 +7,7 @@ include ':ShareLibrary'
 include ':ZXingLibrary'
 include ':ImageLibrary'
 include ':UtilsLibrary'
+include ':PayLibrary'
 
 include ':LoginComponent'
 
@@ -18,6 +19,7 @@ project(':ShareLibrary').projectDir=new File('../library/ShareLibrary')
 project(':ZXingLibrary').projectDir=new File('../library/ZXingLibrary')
 project(':ImageLibrary').projectDir=new File('../library/ImageLibrary')
 project(':UtilsLibrary').projectDir=new File('../library/UtilsLibrary')
+project(':PayLibrary').projectDir=new File('../library/PayLibrary')
 
 project(':LoginComponent').projectDir=new File('../component/LoginComponent')
 

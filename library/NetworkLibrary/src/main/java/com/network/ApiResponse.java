@@ -21,12 +21,6 @@ import android.support.annotation.Nullable;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Common class used by API responses.
- *
- * @param <T>
- * @author batman
- */
 public class ApiResponse<T> {
 
     @Nullable

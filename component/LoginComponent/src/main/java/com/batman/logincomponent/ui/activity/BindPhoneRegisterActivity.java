@@ -10,7 +10,6 @@ import android.support.v7.widget.AppCompatCheckBox;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.batman.baselibrary.NimApi;
 import com.batman.baselibrary.RouterConstants;
 import com.batman.baselibrary.api.ResponseCode;
 import com.batman.baselibrary.base.BaseObserver;
@@ -104,7 +103,7 @@ public class BindPhoneRegisterActivity extends BaseLoginActivity {
         if (i == R.id.btn_login_login) {
             register();
         } else if (i == R.id.tv_register_user_agreement) {
-            ServiceWebActivity.start(mContext, NimApi.WEB_HELP, "用户使用协议");
+            ServiceWebActivity.start(mContext, "", "用户使用协议");
         }
     }
 

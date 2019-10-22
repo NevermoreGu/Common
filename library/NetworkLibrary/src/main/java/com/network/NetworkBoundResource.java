@@ -104,8 +104,6 @@ public abstract class NetworkBoundResource<ResultType> {
     /**
      * 处理网络请求获取的数据
      *
-     * @param response
-     * @return
      */
     @WorkerThread
     protected ResultType processResponse(ApiResponse<ResultType> response) {

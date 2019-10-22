@@ -152,13 +152,7 @@ public class ZipHelper {
         return returnValues;
     }
 
-    /**
-     * gzip compress 2 byte
-     *
-     * @param string
-     * @return
-     * @throws IOException
-     */
+
     public static byte[] compressForGzip(String string) {
         ByteArrayOutputStream os = null;
         GZIPOutputStream gos = null;
@@ -177,13 +171,6 @@ public class ZipHelper {
         return null;
     }
 
-    /**
-     * gzip decompress 2 string
-     *
-     * @param compressed
-     * @return
-     * @throws IOException
-     */
     public static String decompressForGzip(byte[] compressed) {
 
         final int BUFFER_SIZE = compressed.length;

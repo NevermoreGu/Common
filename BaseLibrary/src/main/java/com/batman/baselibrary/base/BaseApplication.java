@@ -101,7 +101,7 @@ public class BaseApplication extends ApplicationDelegate implements IApplication
     }
 
     private void initDebug() {
-        if (BuildConfig.LOG_DEBUG) {
+        if (BuildConfig.DEBUG) {
             initLog();
             installLeakCanary();
             initStrictModeVmPolicy();

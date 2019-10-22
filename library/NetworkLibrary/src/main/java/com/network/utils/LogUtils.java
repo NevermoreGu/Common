@@ -10,7 +10,7 @@ import com.network.BuildConfig;
  */
 public class LogUtils {
 
-    public static boolean DEBUG = BuildConfig.LOG_DEBUG;
+    public static boolean DEBUG = false;
 
     public static void v(String tag, String msg) {
         if (DEBUG) {

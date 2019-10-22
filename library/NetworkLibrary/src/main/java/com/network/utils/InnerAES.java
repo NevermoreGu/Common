@@ -7,12 +7,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-/**
- * @author gaozh@haodaibao.com
- * @Title AES.java
- * @Description AES工具类
- * @date 2013.01.15
- */
+
 public class InnerAES {
     public static final String ALGORITHM = "AES";
 

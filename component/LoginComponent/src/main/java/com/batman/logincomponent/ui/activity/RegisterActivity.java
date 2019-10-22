@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.batman.baselibrary.NimApi;
 import com.batman.baselibrary.RouterConstants;
 import com.batman.baselibrary.api.ResponseCode;
 import com.batman.baselibrary.base.BaseObserver;
@@ -114,7 +113,7 @@ public class RegisterActivity extends BaseLoginActivity {
         } else if (i == R.id.btn_login_login) {
             register();
         } else if (i == R.id.tv_register_user_agreement) {
-            ServiceWebActivity.start(mContext, NimApi.WEB_HELP, "用户使用协议");
+            ServiceWebActivity.start(mContext, "", "用户使用协议");
         }
     }
 
