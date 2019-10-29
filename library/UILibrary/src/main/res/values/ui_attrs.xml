@@ -397,6 +397,13 @@
         <attr name="ui_layout_miniContentProtectionSize" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="UICircleImageView">
+        <attr name="ui_civ_border_width" format="dimension"/>
+        <attr name="ui_civ_border_color" format="color"/>
+        <attr name="ui_civ_border_overlay" format="boolean"/>
+        <attr name="ui_civ_fill_color" format="color"/>
+    </declare-styleable>
+
     <declare-styleable name="UITextAppearance">
         <attr name="android:textSize"/>
         <attr name="android:textColor"/>
@@ -410,11 +417,5 @@
         <attr name="android:shadowRadius"/>
     </declare-styleable>
 
-    <declare-styleable name="UICircleImageView">
-        <attr name="ui_civ_border_width" format="dimension"/>
-        <attr name="ui_civ_border_color" format="color"/>
-        <attr name="ui_civ_border_overlay" format="boolean"/>
-        <attr name="ui_civ_fill_color" format="color"/>
-    </declare-styleable>
 
 </resources>
