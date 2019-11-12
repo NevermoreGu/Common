@@ -21,6 +21,12 @@ import android.support.annotation.Nullable;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Common class used by API responses.
+ *
+ * @param <T>
+ * @author batman
+ */
 public class ApiResponse<T> {
 
     @Nullable
@@ -28,10 +34,10 @@ public class ApiResponse<T> {
     @Nullable
     public String msg;
     @Nullable
-    @SerializedName("resultData")
+    @SerializedName("data")
     public T body;
 
     public boolean isSuccessful() {
-        return code.equals("200") || code.equals("0");
+        return code.equals("0");
     }
 }
