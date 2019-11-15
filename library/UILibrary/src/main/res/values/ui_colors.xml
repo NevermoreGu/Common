@@ -79,31 +79,36 @@
 
 
     /**********************************************
-    *                TabSegment                  *
+    * TabSegment *
     **********************************************/
     <color name="ui_tab_segment_bottom_line_color">?attr/ui_config_color_blue</color>
     <color name="ui_tab_segment_text_color">?attr/ui_config_color_black</color>
 
 
-    <color name="ui_dark_config_ui_bg">#F2F2F2</color>
+    <color name="ui_dark_config_ui_bg">#f5f7fb</color>
     <color name="ui_dark_config_ui_item_bg">#FFFFFF</color>
     <color name="ui_dark_config_ui_top_bar">#FFFFFF</color>
     <color name="ui_dark_config_color_title">#494949</color>
-    <color name="ui_dark_config_color_one_text">#494949</color>//18sp
-    <color name="ui_dark_config_color_one_hint">#999999</color>//14sp
-    <color name="ui_dark_config_color_two_text">#494949</color>//16sp
-    <color name="ui_dark_config_color_two_hint">#cccccc</color>//16sp
-    <color name="ui_dark_config_color_three_hint">#666666</color>//16sp
-    <color name="ui_dark_config_color_three_text">#333333</color>//14sp
 
+    //深色系
+    <color name="ui_dark_config_color_one_text">#333333</color>//18sp
+    <color name="ui_dark_config_color_two_text">#666666</color>//16sp
+    <color name="ui_dark_config_color_three_text">#999999</color>//14sp
+
+    <color name="ui_dark_config_color_hint">#d9d9d9</color>//14sp
+
+    //浅色系
+    <color name="ui_light_config_color_one_text">#FFFFFF</color>//18sp
+    <color name="ui_light_config_color_two_text">#99FFFFFF</color>//16sp
+    <color name="ui_light_config_color_three_text">#4DFFFFFF</color>//16sp
+
+    <color name="ui_light_config_color_hint">#d9d9d9</color>//14sp
 
     <color name="ui_config_color_main">#367cdd</color>
     <color name="ui_config_color_button">#367cdd</color>
     <color name="ui_config_color_button_pressed">#0348A8</color>
     <color name="ui_config_color_red">#EC5353</color>
-
     <color name="ui_config_color_red_title">#FAE3B7</color>
-
 
 
 </resources>

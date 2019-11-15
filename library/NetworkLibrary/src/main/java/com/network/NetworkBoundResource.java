@@ -60,7 +60,7 @@ public abstract class NetworkBoundResource<ResultType> {
                                     mAppExecutors.mainThread().execute(new Runnable() {
                                         @Override
                                         public void run() {
-                                            Resource<ResultType> res = Resource.success(processResponse(response));
+                                            Resource<ResultType> res = Resource.success(processResponse(response), response.msg);
                                             result.setValue(res);
                                             result.setValue((Resource<ResultType>) Resource.complete(null));
                                         }
@@ -69,7 +69,7 @@ public abstract class NetworkBoundResource<ResultType> {
                             });
 
                         } else {
-                            result.setValue(Resource.error(response.msg, processResponse(response),response.code));
+                            result.setValue(Resource.error(response.msg, processResponse(response), response.code));
                             result.setValue((Resource<ResultType>) Resource.complete(null));
                         }
                     }
@@ -103,7 +103,6 @@ public abstract class NetworkBoundResource<ResultType> {
 
     /**
      * 处理网络请求获取的数据
-     *
      */
     @WorkerThread
     protected ResultType processResponse(ApiResponse<ResultType> response) {
@@ -116,7 +115,9 @@ public abstract class NetworkBoundResource<ResultType> {
      * @param item
      */
     @WorkerThread
-    protected abstract void saveCallResult(@NonNull ResultType item);
+    protected void saveCallResult(@NonNull ResultType item) {
+
+    }
 
 
     protected boolean shouldFetch(@Nullable ResultType data) {
@@ -128,7 +129,9 @@ public abstract class NetworkBoundResource<ResultType> {
      *
      * @return
      */
-    protected abstract Observable<ResultType> loadFromDb();
+    protected Observable<ResultType> loadFromDb() {
+        return null;
+    }
 
     /**
      * 调取网络请求获取数据

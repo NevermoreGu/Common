@@ -40,7 +40,7 @@
         android:paddingTop="@dimen/ui_offset_16"
         android:paddingRight="@dimen/ui_offset_10"
         android:paddingBottom="@dimen/ui_offset_16"
-        android:textColorHint="@color/ui_dark_config_color_two_hint"
+
         android:textSize="@dimen/ui_font_size_16"/>
 
     <Button

@@ -26,7 +26,6 @@
         android:paddingLeft="@dimen/ui_offset_12"
         android:paddingRight="@dimen/ui_offset_12"
         android:text="检测到新设备登录，需验证手机号："
-        android:textColor="@color/ui_dark_config_color_three_hint"
         android:textSize="@dimen/ui_font_size_12"/>
 
 
@@ -48,7 +47,7 @@
             android:gravity="center_vertical"
             android:hint="@string/hint_input_verification_code"
             android:textColor="@color/ui_dark_config_color_three_text"
-            android:textColorHint="@color/ui_dark_config_color_two_hint"
+
             android:textSize="@dimen/ui_font_size_16"/>
 
         <View

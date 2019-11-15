@@ -19,6 +19,7 @@ public class LogUtils {
     }
 
     public static void d(String tag, String msg) {
+        boolean isDebug = DEBUG;
         if (DEBUG) {
             Log.d(tag, msg);
         }
