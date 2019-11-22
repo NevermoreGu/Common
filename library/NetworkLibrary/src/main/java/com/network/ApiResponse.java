@@ -29,6 +29,7 @@ import com.google.gson.annotations.SerializedName;
  */
 public class ApiResponse<T> {
 
+    public boolean success;
     @Nullable
     public String code;
     @Nullable
@@ -38,6 +39,6 @@ public class ApiResponse<T> {
     public T body;
 
     public boolean isSuccessful() {
-        return code.equals("0");
+        return success;
     }
 }

@@ -30,6 +30,7 @@ import com.network.Resource;
 import com.network.utils.MD5;
 import com.share.weixin.login.WeiXinLoginUtils;
 import com.ui.widget.UINavigationView;
+import com.utils.notification.NotificationUtils;
 
 import java.util.HashMap;
 
@@ -64,7 +65,6 @@ public class LoginActivity extends BaseLoginActivity {
     }
 
     public static void start(Context context, boolean kickOut) {
-
         Bundle bundle = new Bundle();
         bundle.putBoolean(KICK_OUT, kickOut);
         ActivityUtils.openActivitySingleTop(RouterConstants.LOGIN_COMPONENT_LOGIN_PATH, bundle);
