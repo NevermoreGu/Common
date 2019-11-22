@@ -62,6 +62,9 @@ dependencies {
     api 'io.reactivex.rxjava2:rxjava:2.1.14'
     api 'io.reactivex.rxjava2:rxandroid:2.0.2'
 
+    api 'me.jessyan:retrofit-url-manager:1.4.0'
+
+
 //    api 'com.squareup.okhttp3:logging-interceptor:3.2.0'
 
 //    provided 'org.glassfish:javax.annotation:10.0-b28'
@@ -95,4 +98,6 @@ publish {
     desc = 'Oh hi,It is a network library'
     //网址，可以写自己的github项目页面等
     website = 'https://github.com/NevermoreGu/Common'
+
+
 }

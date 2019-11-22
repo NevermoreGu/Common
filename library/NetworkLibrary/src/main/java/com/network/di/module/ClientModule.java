@@ -5,7 +5,6 @@ import android.text.TextUtils;
 
 import com.network.http.HttpHandler;
 import com.network.http.RequestIntercept;
-import com.network.utils.CustomGsonConverterFactory;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -17,6 +16,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
 import okhttp3.Cache;
 import okhttp3.Cookie;
 import okhttp3.CookieJar;
@@ -170,7 +170,6 @@ public class ClientModule {
 //            logging.setLevel(HttpLoggingInterceptor.Level.BASIC);
 //        }
         final ConcurrentHashMap<String, List<Cookie>> cookieStore = new ConcurrentHashMap<>();
-
         OkHttpClient.Builder builder = okHttpClient
                 .connectTimeout(TOME_OUT, TimeUnit.SECONDS)
                 .readTimeout(TOME_OUT, TimeUnit.SECONDS)
@@ -194,7 +193,10 @@ public class ClientModule {
                 builder.addInterceptor(interceptor);
             }
         }
-        return builder.build();
+        OkHttpClient okHttp = RetrofitUrlManager.getInstance()
+                .with(builder)
+                .build();
+        return okHttp;
     }
 
     public static final class Builder {
