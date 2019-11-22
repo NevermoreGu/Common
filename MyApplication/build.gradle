@@ -2,10 +2,10 @@
 
 buildscript {
     repositories {
+        google()
         jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
-        google()
 
     }
     dependencies {
@@ -24,9 +24,9 @@ allprojects {
             dirs 'libs'
             dirs project(':PayLibrary').file('libs')
         }
+        google()
         jcenter()
         mavenCentral()
-        google()
 //        maven { url 'http://developer.huawei.com/repo/' }
         maven { url "https://jitpack.io" }
 

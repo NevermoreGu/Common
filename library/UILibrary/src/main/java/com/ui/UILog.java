@@ -22,7 +22,7 @@ package com.ui;
  * @date 2016-08-11
  */
 public class UILog {
-    public interface UILogDelegate {
+    public interface UILogDelegate  {
         void e(final String tag, final String msg, final Object... obj);
         void w(final String tag, final String msg, final Object... obj);
         void i(final String tag, final String msg, final Object... obj);

@@ -30,7 +30,6 @@ import com.network.Resource;
 import com.network.utils.MD5;
 import com.share.weixin.login.WeiXinLoginUtils;
 import com.ui.widget.UINavigationView;
-import com.utils.notification.NotificationUtils;
 
 import java.util.HashMap;
 
