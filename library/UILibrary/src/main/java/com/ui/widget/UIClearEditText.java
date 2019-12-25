@@ -86,6 +86,9 @@ public class UIClearEditText extends AppCompatEditText implements OnTouchListene
         if (event.getX() > et.getWidth() - et.getPaddingRight() - deleteImage.getIntrinsicWidth()) {
             et.setText("");
             UIClearEditText.this.removeClearButton();
+            if (onClearListener!=null){
+                onClearListener.onClear();
+            }
         }
         return false;
     }
@@ -112,5 +115,14 @@ public class UIClearEditText extends AppCompatEditText implements OnTouchListene
         } else {
             removeClearButton();
         }
+    }
+    public interface OnClearListener{
+       void onClear();
+    }
+
+    OnClearListener onClearListener;
+
+    public void setOnClearListener(OnClearListener onClearListener) {
+        this.onClearListener = onClearListener;
     }
 }
