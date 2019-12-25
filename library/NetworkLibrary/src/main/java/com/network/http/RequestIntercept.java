@@ -55,7 +55,7 @@ public class RequestIntercept implements Interceptor {
             }
             if (isPlaintext(buffer)) {
                 LogUtils.d(TAG, "Sending Request on------ " + request.url() + " Headers ---> " + request.headers());
-                LogUtils.d(TAG, "Body " + buffer.readString(charset));
+                LogUtils.d(TAG, "Body " + request.url() + buffer.readString(charset));
             } else {
                 LogUtils.d(TAG, "Sending Request on------ " + request.url() + " Headers ---> " + request.headers());
             }
@@ -105,7 +105,7 @@ public class RequestIntercept implements Interceptor {
             bodyString = clone.readString(charset);
         }
 
-        LogUtils.d(TAG, "Result " + JsonUtils.jsonFormat(bodyString));
+        LogUtils.d(TAG, "Result " + request.url() + " " + JsonUtils.jsonFormat(bodyString));
         //这里可以比客户端提前一步拿到服务器返回的结果,可以做一些操作,比如token超时,重新获取
         if (mHttpHandler != null) {
             return mHttpHandler.onHttpResultResponse(bodyString, chain, originalResponse);
