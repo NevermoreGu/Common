@@ -92,7 +92,7 @@ publish {
     //原型id 类比'com.github.bumptech.glide:glide:3.7.0' 中的glide这一部分
     artifactId = 'network'
     //版本号 类比'com.github.bumptech.glide:glide:3.7.0' 中的3.7.0 这一部分。很重要，我们在更新aar文件的时候需要提升版本号，类似更新apk
-    publishVersion = '1.0.7'
+    publishVersion = '1.1.0'
     //描述，大致介绍自己的类库
     desc = 'Oh hi,It is a network library'
     //网址，可以写自己的github项目页面等

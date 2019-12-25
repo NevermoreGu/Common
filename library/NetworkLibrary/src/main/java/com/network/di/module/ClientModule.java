@@ -35,6 +35,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ClientModule {
 
     private static final int TOME_OUT = 10;
+    private static final int READ_TOME_OUT = 300;
     //缓存文件最大值为10Mb
     public static final int HTTP_RESPONSE_DISK_CACHE_MAX_SIZE = 10 * 1024 * 1024;
     private HttpUrl mApiUrl;
@@ -172,7 +173,7 @@ public class ClientModule {
         final ConcurrentHashMap<String, List<Cookie>> cookieStore = new ConcurrentHashMap<>();
         OkHttpClient.Builder builder = okHttpClient
                 .connectTimeout(TOME_OUT, TimeUnit.SECONDS)
-                .readTimeout(TOME_OUT, TimeUnit.SECONDS)
+                .readTimeout(READ_TOME_OUT, TimeUnit.SECONDS)
                 .cache(cache)//设置缓存
                 .cookieJar(new CookieJar() {//这里可以做cookie传递，保存等操作
                     @Override

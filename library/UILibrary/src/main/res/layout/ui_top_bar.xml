@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-       xmlns:tools="http://schemas.android.com/tools"
-       android:layout_width="match_parent"
-       android:layout_height="@dimen/ui_offset_top_bar">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ui_offset_top_bar">
 
 
     <ImageView
@@ -14,10 +14,14 @@
 
     <TextView
 
+        android:layout_marginRight="@dimen/ui_offset_56"
+        android:layout_marginLeft="@dimen/ui_offset_56"
         android:id="@+id/tv_top_bar_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:layout_centerInParent="true"
+        android:singleLine="true"
         android:textColor="@color/ui_dark_config_color_title"
         android:textSize="@dimen/ui_font_top_bar_title"/>
 
