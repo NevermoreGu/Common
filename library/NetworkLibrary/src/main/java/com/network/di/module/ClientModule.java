@@ -35,17 +35,25 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ClientModule {
 
     private static final int TOME_OUT = 10;
-    private static final int READ_TOME_OUT = 300;
+    private static final int READ_TOME_OUT = 10;
     //缓存文件最大值为10Mb
     public static final int HTTP_RESPONSE_DISK_CACHE_MAX_SIZE = 10 * 1024 * 1024;
     private HttpUrl mApiUrl;
     private HttpHandler mHandler;
     private Interceptor[] mInterceptors;
+    private int connectTimeout = TOME_OUT;
+    private int readTimeout = READ_TOME_OUT;
 
     private ClientModule(Builder builder) {
         this.mApiUrl = builder.apiUrl;
         this.mHandler = builder.handler;
         this.mInterceptors = builder.interceptors;
+        if (builder.connectTimeout != 0) {
+            this.connectTimeout = builder.connectTimeout;
+        }
+        if (builder.readTimeout != 0) {
+            this.readTimeout = builder.readTimeout;
+        }
     }
 
     public static Builder builder() {
@@ -172,8 +180,8 @@ public class ClientModule {
 //        }
         final ConcurrentHashMap<String, List<Cookie>> cookieStore = new ConcurrentHashMap<>();
         OkHttpClient.Builder builder = okHttpClient
-                .connectTimeout(TOME_OUT, TimeUnit.SECONDS)
-                .readTimeout(READ_TOME_OUT, TimeUnit.SECONDS)
+                .connectTimeout(connectTimeout, TimeUnit.SECONDS)
+                .readTimeout(readTimeout, TimeUnit.SECONDS)
                 .cache(cache)//设置缓存
                 .cookieJar(new CookieJar() {//这里可以做cookie传递，保存等操作
                     @Override
@@ -204,11 +212,22 @@ public class ClientModule {
         private HttpUrl apiUrl = HttpUrl.parse("");
         private HttpHandler handler;
         private Interceptor[] interceptors;
+        private int connectTimeout;
+        private int readTimeout;
 
         private Builder() {
         }
 
-        //基础url
+        public Builder connectTimeout(int timeout) {
+            this.connectTimeout = timeout;
+            return this;
+        }
+
+        public Builder readTimeout(int timeout) {
+            this.readTimeout = timeout;
+            return this;
+        }
+
         public Builder baseUrl(String baseUrl) {
             if (TextUtils.isEmpty(baseUrl)) {
                 throw new IllegalArgumentException("base_url can not be empty");
@@ -236,34 +255,6 @@ public class ClientModule {
             return new ClientModule(this);
         }
 
-
     }
-
-//    .addNetworkInterceptor(new Interceptor() {
-//        @Override
-//        public Response intercept(Interceptor.Chain chain) throws IOException {
-//            Request request = chain.request();
-//            if(!DeviceUtils.netIsConnected(UiUtils.getContext())){
-//                request = request.newBuilder()
-//                        .cacheControl(CacheControl.FORCE_CACHE)
-//                        .build();
-//                LogUtils.warnInfo("http","no network");
-//            }
-//            Response originalResponse = chain.proceed(request);
-//            if(DeviceUtils.netIsConnected(UiUtils.getContext())){
-//                //有网的时候读接口上的@Headers里的配置，你可以在这里进行统一的设置
-//                String cacheControl = request.cacheControl().toString();
-//                return originalResponse.newBuilder()
-//                        .header("Cache-Control", cacheControl)
-//                        .removeHeader("Pragma")
-//                        .build();
-//            }else{
-//                return originalResponse.newBuilder()
-//                        .header("Cache-Control", "public, only-if-cached, max-stale=2419200")
-//                        .removeHeader("Pragma")
-//                        .build();
-//            }
-//        }
-//    })
 
 }
