@@ -32,6 +32,14 @@ public class ActivityStack {
         }
     }
 
+    public static Activity topActivity () {
+        Activity activity = null;
+        if (!stack.isEmpty()) {
+            activity = stack.getLast();
+        }
+        return activity;
+    }
+
     /**
      * 将指定Activity从模拟栈中移除
      * @param activity 指定移除的Activity

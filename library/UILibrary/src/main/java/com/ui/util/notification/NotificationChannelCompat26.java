@@ -1,4 +1,4 @@
-package com.utils.notification;
+package com.ui.util.notification;
 
 import android.annotation.TargetApi;
 import android.app.NotificationChannel;
@@ -43,7 +43,7 @@ public class NotificationChannelCompat26 {
         NotificationChannel channel;
         NotificationManager manager = ((NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE));
         if (manager != null) {
-            channel = manager.getNotificationChannel(NIM_CHANNEL_ID); // 已经存在就不要再创建了，无法修改通道配置
+            channel = manager.getNotificationChannel(NIM_CHANNEL_ID); // 已经存在就不要再创建了，無法修改通道配置
             if (channel == null) {
                 channel = buildNIMMessageChannel();
                 manager.createNotificationChannel(channel);

@@ -418,4 +418,9 @@
     </declare-styleable>
 
 
+    //验证码倒计时按钮
+    <declare-styleable name="UISendValidateButton">
+        <attr name="ui_disAblDrawable" format="reference" />
+        <attr name="ui_defaultDrawable" format="reference" />
+    </declare-styleable>
 </resources>

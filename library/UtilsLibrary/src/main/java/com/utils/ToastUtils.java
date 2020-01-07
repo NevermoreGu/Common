@@ -3,8 +3,6 @@ package com.utils;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.batman.baselibrary.delegate.ApplicationDispatcher;
-
 /**
  * @author guqian
  */
@@ -12,6 +10,7 @@ public class ToastUtils {
 
     /**
      * 系统toast
+     *
      * @param context
      * @param message
      */
@@ -29,14 +28,6 @@ public class ToastUtils {
 
     public static void showLongToast(Context context, int messageId) {
         Toast.makeText(context.getApplicationContext(), context.getString(messageId), Toast.LENGTH_LONG).show();
-    }
-
-    public static void showLong(String message) {
-        Toast.makeText(ApplicationDispatcher.get().getApplicationContext(), message, Toast.LENGTH_LONG).show();
-    }
-
-    public static void showShort(String message) {
-        Toast.makeText(ApplicationDispatcher.get().getApplicationContext(), message, Toast.LENGTH_LONG).show();
     }
 
 }

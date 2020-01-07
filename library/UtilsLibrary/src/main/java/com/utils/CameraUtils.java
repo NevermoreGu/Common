@@ -12,7 +12,6 @@ import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 
-import com.batman.baselibrary.Constant;
 
 import java.io.File;
 
@@ -24,15 +23,15 @@ public class CameraUtils {
     public static final int TAKE_PICTURE_FROM_GALLERY = 200;
     public static final int TAKE_PICTURE_PREVIEW = 300;
 
-    public static File showCameraAction(Activity context) {
+    public static File showCameraAction(Activity context, String provider) {
         File file = FileUtils.getDiskCachePicture(context);
-        showCameraAction(context, file);
+        showCameraAction(context, file, provider);
         return file;
     }
 
-    public static File showCameraAction(Activity context, String temporaryFileName) {
+    public static File showCameraAction(Activity context, String temporaryFileName, String provider) {
         File file = FileUtils.getDiskCachePicture(context, temporaryFileName);
-        showCameraAction(context, file);
+        showCameraAction(context, file, provider);
         return file;
     }
 
@@ -44,12 +43,12 @@ public class CameraUtils {
      * @param temporaryFile
      * @return
      */
-    public static Uri showCameraAction(Activity context, File temporaryFile) {
+    public static Uri showCameraAction(Activity context, File temporaryFile, String provider) {
 
-        return showCameraAction(context, temporaryFile, TAKE_PICTURE_FROM_CAMERA);
+        return showCameraAction(context, temporaryFile, TAKE_PICTURE_FROM_CAMERA, provider);
     }
 
-    public static Uri showCameraAction(Activity context, File temporaryFile, int requestCode) {
+    public static Uri showCameraAction(Activity context, File temporaryFile, int requestCode, String provider) {
         // 跳转到系统照相机
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         Uri uri = null;
@@ -57,7 +56,7 @@ public class CameraUtils {
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 //步骤二：Android 7.0及以上获取文件 Uri
-                uri = FileProvider.getUriForFile(context, Constant.FILE_PATH_PROVIDER, temporaryFile);
+                uri = FileProvider.getUriForFile(context, provider, temporaryFile);
             } else {
                 //步骤三：获取文件Uri
                 uri = Uri.fromFile(temporaryFile);

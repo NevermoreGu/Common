@@ -5,4 +5,7 @@
     <string name="ui_tool_fixellipsize">\u200b</string>
 
     <string name="app_name">UI</string>
+
+    <string name="send_code">获取验证码</string>
+    <string name="second">秒</string>
 </resources>
