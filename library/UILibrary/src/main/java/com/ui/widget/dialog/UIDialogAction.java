@@ -17,6 +17,7 @@
 package com.ui.widget.dialog;
 
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
@@ -198,6 +199,6 @@ public class UIDialogAction {
     }
 
     public interface ActionListener {
-        void onClick(UIDialog dialog, int index);
+        void onClick(Dialog dialog, int index);
     }
 }

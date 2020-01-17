@@ -1,8 +1,11 @@
 package com.ui.util;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.view.View;
 
+import com.ui.widget.dialog.CustomOneDialog;
 import com.ui.widget.dialog.UIBottomSheet;
 import com.ui.widget.dialog.UIDialog;
 import com.ui.widget.dialog.UIDialogAction;
@@ -74,6 +77,37 @@ public class UIDialogHelper {
                 .setOnSheetItemClickListener(listener)
                 .build()
                 .show();
+    }
+
+    public static Dialog showCommonDialog(Context context, String title, String message, boolean isForse,
+                                          UIDialogAction.ActionListener negativeListener,
+                                          UIDialogAction.ActionListener positiveListener) {
+
+        CustomOneDialog dialog = new CustomOneDialog(context);
+        dialog.tvTitle.setText(message);
+        dialog.subTvTitle.setText(title);
+        dialog.subTvTitle.setVisibility(View.VISIBLE);
+        if (isForse) {
+            dialog.buttonCancel.setVisibility(View.GONE);
+        } else {
+            dialog.buttonCancel.setVisibility(View.VISIBLE);
+        }
+        dialog.buttonCancel.setText("取消");
+        dialog.buttonCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                negativeListener.onClick(dialog, 0);
+            }
+        });
+        dialog.buttonOK.setText("确定");
+        dialog.buttonOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                positiveListener.onClick(dialog, 1);
+            }
+        });
+        dialog.setCancelable(false);
+        return dialog;
     }
 
 
